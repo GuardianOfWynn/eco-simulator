@@ -1,0 +1,516 @@
+[
+    {
+        "territory": "Hive",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Hive South", "Thanos Exit Upper"]
+    },
+    {
+        "territory": "Hive South",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Hive", "Thanos Exit Upper", "Canyon High Path", "Chained House", "Cherry Blossom Forest"]
+    },
+    {
+        "territory": "Cherry Blossom Forest",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Hive South", "Ranol's Farm", "Chained House"]
+    },
+    {
+        "territory": "Ranol's Farm",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Eltom", "Thesead Suburbs", "Cherry Blossom Forest"]
+    },
+    {
+        "territory": "Thesead Suburbs",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Chained House", "Ranol's Farm", "Entrance to Rodoroc", "Thesead"]
+    },
+    {
+        "territory": "Thesead",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": ["Entrance to Thesead South", "Thesead Suburbs"]
+    },
+    {
+        "territory": "Thanos Exit",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Thanos Exit Upper"]
+    },
+    {
+        "territory": "Thanos Exit Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Thanos Exit", "Bandits Toll", "Canyon High Path", "Hive South", "Hive"]
+    },
+    {
+        "territory": "Canyon High Path",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Thanos Exit Upper", "Cliffside Waterfall", "Hive South"]
+    },
+    {
+        "territory": "Chained House",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns":["Thesead Suburbs","Entrance to Thesead South", "Cherry Blossom Forest","Hive South"]
+    },
+    {
+        "territory": "Path To Ozoth's Spire Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Path to Thanos", "Bandit Cave Lower", "Cinfras Thanos Transition", "Path To Ozoth's Spire Mid"]
+    },
+    {
+        "territory": "Path To Ozoth's Spire Mid",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Path To Ozoth's Spire Upper", "Canyon Walk Way"]
+    },
+    {
+        "territory": "Canyon Walk Way",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Bandits Toll", "Path To Ozoth's Spire Mid", "Canyon Mountain East"]
+    },
+    {
+        "territory": "Bandits Toll",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Thanos Exit Upper", "Cliffside Valley", "Wizard Tower North", "Canyon Walk Way"]
+    },
+    {
+        "territory": "Cliffside Waterfall",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["Canyon High Path"]
+    },
+    {
+        "territory": "Entrance to Thesead South",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Thesead", "Cliffside Valley", "Chained House", "Entrance to Thesead North"]
+    },
+    {
+        "territory": "Cinfras Thanos Transition",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Burning Airship", "Cinfras County Mid-Upper", "Path to Thanos", "Path To Ozoth's Spire Upper"]
+    },
+    {
+        "territory": "Bandit Cave Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Path To Ozoth's Spire Upper", "Canyon Valley South"]
+    },
+    {
+        "territory": "Canyon Valley South",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Bandit Cave Lower", "Bandit Camp Exit", "Canyon Mountain East"]
+    },
+    {
+        "territory": "Canyon Mountain East",
+        "ore": 2,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Canyon Walk Way", "Canyon Valley South"]
+    },
+    {
+        "territory": "Wizard Tower North",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Bandits Toll", "Krolton's Cave"]
+    },
+    {
+        "territory": "Wizard Tower North",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Bandits Toll", "Krolton's Cave"]
+    },
+    {
+        "territory": "Cliffside Valley",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Bandits Toll", "Air Temple Lower", "Entrance to Thesead North", "Entrance to Thesead South"]
+    },
+    {
+        "territory": "Entrance to Thesead North",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cliffside Valley", "Entrance to Thesead South", "Cliffside Passage North"]
+    },
+    {
+        "territory": "Burning Airship",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cinfras Thanos Transition", "Bandit Cave Upper", "Burning Farm"]
+    },
+    {
+        "territory": "Bandit Cave Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Burning Airship"]
+    },
+    {
+        "territory": "Bandit Cave Exit",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Canyon Valley South", "Canyon Path North Mid"]
+    }
+    ,
+    {
+        "territory": "Canyon Mountain South",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Krolton's Cave", "Canyon Waterfall Mid North"]
+    },
+    {
+        "territory": "Krolton's Cave",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Canyon Mountain South", "Wizard Tower North", "Air Temple Lower", "Temple of the Lost East"]
+    },
+    {
+        "territory": "Air Temple Lower",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["Krolton's Cave", "Air Temple Upper", "Cliffside Valley"]
+    },
+    {
+        "territory": "Cliffside Passage North",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cliffside Passage", "Entrance to Thesead North"]
+    },
+    {
+        "territory": "Burning Farm",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Burning Airship", "Ghostly Path"]
+    },
+    {
+        "territory": "Canyon Entrance Waterfall",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Canyon Path North Mid", "Canyon Path North West"]
+    },
+    {
+        "territory": "Canyon Path North Mid",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Canyon Entrance Waterfall", "Bandit Camp Exit", "Canyon Waterfall Mid North", "Canyon Path South West"]
+    },
+    {
+        "territory": "Canyon Waterfall Mid North",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Canyon Path North Mid", "Canyon Mountain South", "Canyon Fortress"]
+    },
+    {
+        "territory": "Temple of the Lost East",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Krolton's Cave", "Valley of the Lost"]
+    },
+    {
+        "territory": "Air Temple Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Air Temple Lower"]
+    },
+    {
+        "territory": "Cliffside Passage",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cliffside Passage North", "Cliffside Lake"]
+    },
+    {
+        "territory": "Ghostly Passage",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Burning Farm", "Path To The Arch"]
+    },
+    {
+        "territory": "Canyon Path North West",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Canyon Entrance Waterfall", "Canyon Path South West", "Canyon Path South East"]
+    },
+    {
+        "territory": "Canyon Path South West",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Canyon Path North West", "Canyon Path North Mid", "Canyon Lower South East"]
+    },
+    {
+        "territory": "Canyon Fortress",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["Canyon Waterfall Mid North", "Valley of the Lost"]
+    },
+    {
+        "territory": "Valley of the Lost",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Canyon Fortress", "Temple of the Lost East", "Cliff Side of the Lost", "Canyon Of The Lost"]
+    },
+    {
+        "territory": "Cliffside Lake",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Canyon Of The Lost", "Cliffside Passage"]
+    },
+    {
+        "territory": "Path To The Arch",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Aldorei's North Exit", "Aldorei's Arch", "Ghostly Path"]
+    },
+    {
+        "territory": "Canyon Path South East",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Canyon Path North West", "Canyon Lower South East"]
+    },
+    {
+        "territory": "Canyon Lower South East",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Canyon Path South East", "Canyon Survivor"]
+    },
+    {
+        "territory": "Canyon Survivor",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Canyon Lower South East", "Cliff Side of the Lost"]
+    },
+    {
+        "territory": "Aldorei's Arch",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Canyon Waterfall North", "Path To The Arch"]
+    },
+    {
+        "territory": "Canyon Waterfall North",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Aldorei's Arch", "Canyon Upper North West"]
+    },
+    {
+        "territory": "Canyon Upper North West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Canyon Waterfall North", "Canyon Lower South East"]
+    },
+    {
+        "territory": "Canyon Dropoff",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cliff Side of the Lost", "Mountain Path"]
+    },
+    {
+        "territory": "Cliff Side of the Lost",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Canyon Dropoff","Canyon Of The Lost","Canyon Survivor","Valley of the Lost","Mountain Edge"]
+    },
+    {
+        "territory": "Canyon Of The Lost",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cliff Side of the Lost", "Valley of the Lost", "Cliffside Lake", "Kandon-Beda"]
+    },
+    {
+        "territory": "Kandon-Beda",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": ["Canyon Of The Lost"]
+    },
+    {
+        "territory": "Mountain Path",
+        "ore": 2,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Canyon Dropoff"]
+    },
+    {
+        "territory": "Mountain Edge",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cliff Side of the Lost"]
+    }
+]
