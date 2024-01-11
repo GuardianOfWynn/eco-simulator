@@ -245,9 +245,12 @@ func (t *Territory) ConsumeResources(costs map[ResourceType]int64) {
 			} else {
 				t.Storage[k] = 0
 				t.PassingResource[k] = passing + stored - v
+				t.resourceGap = false
 			}
+		} else {
+			t.resourceGap = false
+			t.Storage[k] = t.Storage[k] - v
 		}
-		t.Storage[k] = t.Storage[k] - v
 	}
 }
 
@@ -264,6 +267,7 @@ func (t *Territory) StoreResource(resources map[ResourceType]int64) {
 			t.resourceOverflow = true
 			t.Storage[k] = int64(storage)
 		} else {
+			t.resourceOverflow = false
 			t.Storage[k] = stored + v
 		}
 	}
