@@ -1,6 +1,7 @@
 package territory
 
 import (
+	"strings"
 	"time"
 
 	"github.com/victorbetoni/go-streams/streams"
@@ -10,6 +11,11 @@ type RouteStyle uint8
 type BorderStyle uint8
 type ResourceType uint8
 type Treasury uint8
+
+const (
+	CHEAPEST RouteStyle = iota
+	FASTEST
+)
 
 const (
 	CROP ResourceType = iota
@@ -40,8 +46,25 @@ type Storage struct {
 	StoredFish    int32
 }
 
+type Claim struct {
+	GlobalTax     uint8
+	AllyTax       uint8
+	GlobalStyle   RouteStyle
+	GlobalBorders BorderStyle
+	Territories   []Territory
+}
+
+func (c *Claim) GetTerritory(name string) *Territory {
+	for _, v := range c.Territories {
+		if strings.ToLower(v.Name) == strings.ToLower(name) {
+			return &v
+		}
+	}
+	return nil
+}
+
 type BaseTerritory struct {
-	Name              string   `json:"name"`
+	Name              string   `json:"territory"`
 	OreMultiplier     float32  `json:"ore"`
 	CropMultiplier    float32  `json:"crop"`
 	WoodMultiplier    float32  `json:"wood"`
@@ -64,6 +87,7 @@ func (b *BaseTerritory) CreateTerritoryInstance() *Territory {
 		RouteStyle:           RouteStyle(OPEN),
 		Borders:              CLOSED,
 		TargetTerritory:      "",
+		Connections:          b.Conns,
 		Upgrades: map[string]uint8{
 			"attack_speed": 1,
 			"defence":      1,
@@ -132,6 +156,7 @@ type Territory struct {
 	resourceGap           bool
 	Bonuses               map[string]uint8
 	Upgrades              map[string]uint8
+	Connections           []string
 }
 
 type PassingResource struct {
@@ -219,7 +244,7 @@ func (t *Territory) Tick() {
 		}
 	}
 	if currentTimeMillis-t.lastResourceTransfer >= 60000 {
-		t.TransferResource(*t.Claim.GetTerritory(t.TargetTerritory).Wrapped)
+		t.TransferResource(*t.Claim.GetTerritory(t.TargetTerritory))
 	}
 }
 
