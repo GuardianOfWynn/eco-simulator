@@ -7,7 +7,6 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/GuardianOfWynn/eco-simulator/pathfinding"
 	"github.com/GuardianOfWynn/eco-simulator/territory"
 )
 
@@ -40,7 +39,7 @@ func main() {
 	}
 	claim.Territories = territories
 
-	finder := pathfinding.Pathfinder{
+	finder := territory.Pathfinder{
 		From:       &claim.Territories[3],
 		Target:     &claim.Territories[8],
 		Claim:      claim,
