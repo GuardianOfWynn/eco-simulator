@@ -244,19 +244,35 @@ func (t *Territory) Tick() {
 		}
 	}
 	if currentTimeMillis-t.lastResourceTransfer >= 60000 {
-		t.TransferResource(*t.Claim.GetTerritory(t.TargetTerritory))
+		t.TransferResource(t.Claim.GetTerritory(t.TargetTerritory))
 	}
 }
 
-func (t *Territory) TransferResource(target Territory) {
-	target.ReceiveResource(target, t.PassingResource)
+func (t *Territory) TransferResource(target *Territory) {
+	for _, conn := range t.Connections {
+		if strings.ToLower(conn) == strings.ToLower(target.Name) {
+			target.ReceiveResource(nil, t.PassingResource)
+			return
+		}
+	}
+	pathfinder := Pathfinder{
+		From:       t,
+		Target:     t.Claim.GetTerritory(t.TargetTerritory),
+		Claim:      *t.Claim,
+		RouteStyle: t.RouteStyle,
+	}
+	route := pathfinder.Route()
+	if len(route) > 0 {
+		route[0].ReceiveResource(target, t.PassingResource)
+	}
 }
 
-func (t *Territory) ReceiveResource(target Territory, resources map[ResourceType]int64) {
+func (t *Territory) ReceiveResource(target *Territory, resources map[ResourceType]int64) {
 	if t.Name == target.Name {
 		t.StoreResource(resources)
 	} else {
 		t.PassingResource = resources
+		t.TargetTerritory = target.Name
 	}
 }
 

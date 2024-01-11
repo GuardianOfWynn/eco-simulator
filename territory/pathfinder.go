@@ -1,22 +1,22 @@
-package pathfinding
+package territory
 
 import (
 	"strings"
 
-	"github.com/GuardianOfWynn/eco-simulator/territory"
 	"github.com/victorbetoni/go-streams/streams"
 )
 
 type Pathfinder struct {
-	From       *territory.Territory
-	Target     *territory.Territory
-	Claim      territory.Claim
-	RouteStyle territory.RouteStyle
+	From       *Territory
+	Target     *Territory
+	Claim      Claim
+	RouteStyle RouteStyle
 }
 
-func (p *Pathfinder) Route() []territory.Territory {
+// for cheapest: order conns by tax value
+func (p *Pathfinder) Route() []Territory {
 
-	routes := [][]territory.Territory{}
+	routes := [][]Territory{}
 
 	for _, conn := range p.From.Connections {
 		connTerr := p.Claim.GetTerritory(conn)
@@ -26,14 +26,14 @@ func (p *Pathfinder) Route() []territory.Territory {
 			Claim:      p.Claim,
 			RouteStyle: p.RouteStyle,
 		}
-		result, vis := pfinder.expand([]territory.Territory{})
+		result, vis := pfinder.expand([]Territory{})
 		if result {
 			routes = append(routes, vis)
 		}
 	}
 
 	if len(routes) == 0 {
-		return []territory.Territory{}
+		return []Territory{}
 	}
 
 	currentRoute := routes[0]
@@ -47,7 +47,8 @@ func (p *Pathfinder) Route() []territory.Territory {
 	return currentRoute
 }
 
-func (p *Pathfinder) expand(visited []territory.Territory) (bool, []territory.Territory) {
+// for cheapest: order conns by tax value
+func (p *Pathfinder) expand(visited []Territory) (bool, []Territory) {
 	if p.From == nil {
 		return false, visited
 	}
@@ -59,7 +60,7 @@ func (p *Pathfinder) expand(visited []territory.Territory) (bool, []territory.Te
 		}
 	}
 	for _, conn := range p.From.Connections {
-		if streams.StreamOf[territory.Territory](visited...).AnyMatch(func(e territory.Territory) bool {
+		if streams.StreamOf[Territory](visited...).AnyMatch(func(e Territory) bool {
 			return strings.ToLower(e.Name) == strings.ToLower(conn)
 		}) {
 			continue
@@ -78,5 +79,5 @@ func (p *Pathfinder) expand(visited []territory.Territory) (bool, []territory.Te
 	}
 
 	visited = visited[:len(visited)-1]
-	return false, []territory.Territory{}
+	return false, []Territory{}
 }
