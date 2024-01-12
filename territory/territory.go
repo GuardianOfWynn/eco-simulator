@@ -265,7 +265,7 @@ func (t *Territory) TransferResource(transf ResourceTransference) {
 			return
 		}
 	}
-	/*pathfinder := Pathfinder{
+	pathfinder := Pathfinder{
 		From:       t,
 		Target:     t.Claim.GetTerritory(t.TargetTerritory),
 		Claim:      *t.Claim,
@@ -273,8 +273,8 @@ func (t *Territory) TransferResource(transf ResourceTransference) {
 	}
 	route := pathfinder.Route()
 	if len(route) > 0 {
-		//route[0].ReceiveResource(transf)
-	}*/
+		route[0].ReceiveResource(transf)
+	}
 }
 
 func (t *Territory) ReceiveResource(transference ResourceTransference) {

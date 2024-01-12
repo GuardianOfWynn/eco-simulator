@@ -38,16 +38,16 @@ func main() {
 		territories = append(territories, a.CreateTerritoryInstance())
 	}
 	claim.Territories = territories
-	index := 32
-	for i, v := range claim.Territories {
-		if v.Name == "Canyon Entrance Waterfall" {
-			index = i
+	//index := 0
+	for _, v := range claim.Territories {
+		if v.Name == "Bizarre Passage" {
+			//		index = i
 		}
 	}
 
 	finder := territory.Pathfinder{
 		From:       claim.Territories[0],
-		Target:     claim.Territories[index],
+		Target:     claim.Territories[42],
 		Claim:      claim,
 		RouteStyle: territory.CHEAPEST,
 	}
@@ -57,7 +57,5 @@ func main() {
 	fmt.Println("")
 	route := finder.Route()
 	fmt.Println(len(route))
-	for _, v := range finder.Route() {
-		fmt.Println(v)
-	}
+
 }

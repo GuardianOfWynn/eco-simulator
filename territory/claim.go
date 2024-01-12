@@ -1,7 +1,6 @@
 package territory
 
 import (
-	"fmt"
 	"strings"
 
 	"github.com/google/uuid"
@@ -17,11 +16,10 @@ type Claim struct {
 
 func (c *Claim) GetTerritory(name string) *Territory {
 	for _, v := range c.Territories {
-		if strings.ToLower(v.Name) == strings.ToLower(name) {
+		if strings.EqualFold(v.Name, name) {
 			return v
 		}
 	}
-	fmt.Println("nao achou ", name)
 	return nil
 }
 

@@ -3,7 +3,6 @@ package territory
 import (
 	"fmt"
 	"math"
-	"time"
 
 	fibheap "github.com/starwander/gofibonacciheap"
 	"github.com/victorbetoni/go-streams/streams"
@@ -17,7 +16,7 @@ type Pathfinder struct {
 }
 
 type Node struct {
-	Territory string
+	Territory *Territory
 	Conns     []string
 	Distance  float64
 	Parent    *Node
@@ -31,54 +30,78 @@ func (n *Node) Key() float64 {
 	return n.Distance
 }
 
-// for cheapest: order conns by tax value
-func (p *Pathfinder) Route() []string {
-	fmt.Println("começou")
+func (p *Pathfinder) Route() []*Territory {
+
 	//implement djikstra algorithm
-	start := time.Now().UnixMilli()
+
+	visited := map[string]bool{}
+	nodes := map[string]*Territory{}
+	distances := make(map[string]int)
+	previous := make(map[string]string)
 	root := p.From.Name
 	nodesMap := map[string]*Node{}
-	nodesMap[root] = &Node{
-		Territory: root,
-		Conns:     p.From.Connections,
-		Distance:  0, Parent: nil,
-	}
+
 	streams.StreamOf[*Territory](p.Claim.Territories...).ForEach(func(e *Territory) {
 		nodesMap[e.Name] = &Node{
-			Territory: e.Name,
+			Territory: e,
 			Distance:  math.Inf(1),
 			Conns:     e.Connections,
 			Parent:    nil,
 		}
+		distances[e.Name] = math.MaxInt64
+		nodes[e.Name] = e
 	})
 
-	path := []string{}
-	heap := fibheap.NewFibHeap()
-
-	for _, v := range nodesMap {
-		heap.InsertValue(v)
+	nodesMap[root] = &Node{
+		Territory: p.From,
+		Conns:     p.From.Connections,
+		Distance:  0,
+		Parent:    nil,
 	}
+
+	distances[root] = 0
+	heap := fibheap.NewFibHeap()
+	heap.InsertValue(nodesMap[root])
 
 	for heap.Num() != 0 {
+
 		minimum := heap.ExtractMinValue()
 		tag := fmt.Sprintf("%v", minimum.Tag())
-		path = append(path, tag)
-		for _, conn := range nodesMap[tag].Conns {
-			p.relax(nodesMap[tag], nodesMap[conn], 1)
+		if visited[tag] {
+			continue
 		}
-	}
-	end := time.Now().UnixMilli()
-	fmt.Println("took ", start-end, " milliseconds")
 
-	return path
-}
+		visited[tag] = true
+		fromNode := nodesMap[tag]
 
-func (p *Pathfinder) relax(from, to *Node, edgeWeight int) {
-	if to == nil {
-		fmt.Println(from.Territory)
+		for _, conn := range nodesMap[tag].Conns {
+			if !visited[conn] {
+				edgeWeight := 1 // if territory has tax, increase this value
+				toNode := nodesMap[conn]
+				if distances[fromNode.Territory.Name]+edgeWeight < distances[conn] {
+					toNode.Distance = fromNode.Distance + float64(edgeWeight)
+					toNode.Parent = fromNode
+					distances[conn] = distances[fromNode.Territory.Name] + edgeWeight
+					previous[conn] = fromNode.Territory.Name
+					heap.InsertValue(toNode)
+				}
+			}
+		}
+
 	}
-	if from.Distance+float64(edgeWeight) < to.Distance {
-		to.Distance = from.Distance + float64(edgeWeight)
-		to.Parent = from
+
+	path := []*Territory{}
+	currentNode := previous[p.Target.Name]
+
+	for currentNode != p.From.Name {
+		path = append(path, nodes[currentNode])
+		currentNode = previous[currentNode]
 	}
+
+	reversed := []*Territory{}
+	for i, j := 0, len(path)-1; i < j; i, j = i+1, j-1 {
+		reversed[i], reversed[j] = path[j], path[i]
+	}
+
+	return reversed
 }
