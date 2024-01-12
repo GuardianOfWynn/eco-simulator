@@ -26,7 +26,7 @@ func main() {
 	var terrs []territory.BaseTerritory
 	_ = json.Unmarshal([]byte(str), &terrs)
 
-	territories := []territory.Territory{}
+	territories := []*territory.Territory{}
 	claim := territory.Claim{
 		GlobalTax:     0,
 		AllyTax:       0,
@@ -35,13 +35,19 @@ func main() {
 	}
 
 	for _, a := range terrs {
-		territories = append(territories, *a.CreateTerritoryInstance())
+		territories = append(territories, a.CreateTerritoryInstance())
 	}
 	claim.Territories = territories
+	index := 32
+	for i, v := range claim.Territories {
+		if v.Name == "Canyon Entrance Waterfall" {
+			index = i
+		}
+	}
 
 	finder := territory.Pathfinder{
-		From:       &claim.Territories[3],
-		Target:     &claim.Territories[8],
+		From:       claim.Territories[0],
+		Target:     claim.Territories[index],
 		Claim:      claim,
 		RouteStyle: territory.CHEAPEST,
 	}
@@ -49,7 +55,9 @@ func main() {
 	fmt.Println("From: ", finder.From.Name)
 	fmt.Println("Target: ", finder.Target.Name)
 	fmt.Println("")
+	route := finder.Route()
+	fmt.Println(len(route))
 	for _, v := range finder.Route() {
-		fmt.Println(v.Name)
+		fmt.Println(v)
 	}
 }

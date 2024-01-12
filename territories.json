@@ -114,7 +114,7 @@
         "wood": 1,
         "fish": 0,
         "emerald": 1,
-        "conns": ["Bandits Toll", "Path To Ozoth's Spire Mid", "Canyon Mountain East"]
+        "conns": ["Bandits Toll", "Canyon Mountain East", "Path To Ozoth's Spire Mid"]
     },
     {
         "territory": "Bandits Toll",
@@ -123,7 +123,7 @@
         "wood": 0,
         "fish": 0,
         "emerald": 1,
-        "conns": ["Thanos Exit Upper", "Cliffside Valley", "Wizard Tower North", "Canyon Walk Way"]
+        "conns": ["Thanos Exit Upper", "Canyon Walk Way", "Cliffside Valley", "Wizard Tower North"]
     },
     {
         "territory": "Cliffside Waterfall",
@@ -153,6 +153,15 @@
         "conns": ["Burning Airship", "Cinfras County Mid-Upper", "Path to Thanos", "Path To Ozoth's Spire Upper"]
     },
     {
+        "territory": "Path to Thanos",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Burning Airship", "Cinfras County Mid-Upper", "Path to Thanos", "Path To Ozoth's Spire Upper"]
+    },
+    {
         "territory": "Bandit Cave Lower",
         "ore": 1,
         "crop": 0,
@@ -169,6 +178,15 @@
         "fish": 0,
         "emerald": 1,
         "conns": ["Bandit Cave Lower", "Bandit Camp Exit", "Canyon Mountain East"]
+    },
+    {
+        "territory": "Bandit Camp Exit",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Canyon Valley South", "Canyon Path North Mid"]
     },
     {
         "territory": "Canyon Mountain East",
@@ -232,15 +250,6 @@
         "fish": 0,
         "emerald": 1,
         "conns": ["Burning Airship"]
-    },
-    {
-        "territory": "Bandit Cave Exit",
-        "ore": 1,
-        "crop": 0,
-        "wood": 0,
-        "fish": 0,
-        "emerald": 1,
-        "conns": ["Canyon Valley South", "Canyon Path North Mid"]
     }
     ,
     {
@@ -512,5 +521,1425 @@
         "fish": 0,
         "emerald": 1,
         "conns": ["Cliff Side of the Lost"]
+    },
+    {
+        "territory": "Ghostly Path",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Path To The Arch", "Burning Farm"]
+    },
+    {
+        "territory": "Thanos Valley West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Military Base Lower"]
+    },
+    {
+        "territory": "Military Base Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Military Base Lower", "Military Base"]
+    },
+    {
+        "territory": "Military Base Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Thanos Valley West", "Path To Ozoth's Spire Lower", "Military Base Upper"]
+    },
+    {
+        "territory": "Military Base",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Military Base Upper", "Path To Military Base", "Gylia Lake North East"]
+    },
+    {
+        "territory": "Path To Ozoth's Spire Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Thanos", "Military Base Lower"]
+    },
+    {
+        "territory": "Thanos",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": ["Path To Ozoth's Spire Lower", "Path To Military Base", "Gylia Lake South East", "Path to Thanos"]
+    },
+    {
+        "territory": "Gert Camp",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Jitak's Farm", "Gylia Lake North East"]
+    },
+    {
+        "territory": "Jitak's Farm",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Gert Camp", "Gylia Lake North West", "Mushroom Hill"]
+    },
+    {
+        "territory": "Gylia Lake North West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Gylia Lake North East", "Jitak's Farm", "Gylia Lake South West", "Fallen Village"]
+    },
+    {
+        "territory": "Gylia Lake North East",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Gylia Lake North West", "Gert Camp", "Gylia Lake South East", "Military Base"]
+    },
+    {
+        "territory": "Gylia Lake South West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Gylia Lake North West", "Gylia Lake South East", "Dark Forest Cinfras Transition"]
+    },
+    {
+        "territory": "Gylia Lake South East",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Gylia Lake South West", "Gylia Lake North East", "Cinfras County Upper", "Thanos"]
+    },
+    {
+        "territory": "Cinfras County Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cinfras County Upper", "Path to Thanos", "Cinfras County Mid-Upper"]
+    },
+    {
+        "territory": "Cinfras County Mid-Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cinfras Thanos Transition", "Cinfras County Upper", "Cinfras County Mid-Lower"]
+    },
+    {
+        "territory": "Cinfras County Mid-Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cinfras County Lower", "Cinfras County Mid-Upper", "Cinfras's Small Farm"]
+    },
+    {
+        "territory": "Cinfras County Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cinfras County Mid-Lower", "Cinfras's Small Farm", "Aldorei's North Exit"]
+    },
+    {
+        "territory": "Aldorei's North Exit",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["Aldorei Valley South Entrance", "Path To The Arch", "Cinfras County Lower"]
+    },
+    {
+        "territory": "Cinfras's Small Farm",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cinfras County Mid-Lower", "Aldorei Valley South Entrance", "Aldorei's North Exit", "Aldorei Lowlands"]
+    },
+    {
+        "territory": "Aldorei Valley South Entrance",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Aldorei's North Exit", "Aldorei's Waterfall", "Cinfras's Small Farm"]
+    },
+    {
+        "territory": "Aldorei Lowlands",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Aldorei's River", "Cinfras's Small Farm", "Aldorei's Waterfall"]
+    },
+    {
+        "territory": "Aldorei's River",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cinfras", "Aldorei Lowlands"]
+    },
+    {
+        "territory": "Aldorei's Waterfall",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Aldorei Valley South Entrance", "Aldorei Lowlands", "Aldorei Valley Upper"]
+    },
+    {
+        "territory": "Aldorei Valley Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Aldorei Valley Mid", "Aldorei's Waterfall"]
+    },
+    {
+        "territory": "Aldorei Valley Mid",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Aldorei Valley Lower", "Aldorei Valley Upper"]
+    },
+    {
+        "territory": "Aldorei Valley Lower",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Aldorei Valley Mid", "Mantis Nest", "Aldorei Valley West Entrance"]
+    },
+    {
+        "territory": "Mushroom Hill",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Heart of Decay", "Decayed Basin", "Fallen Village", "Jitak's Farm"]
+    },
+    {
+        "territory": "Fallen Village",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Mushroom Hill", "Cinfras Outskirts", "Gylia Lake South West"]
+    },
+    {
+        "territory": "Dark Forest Cinfras Transition",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cinfras Outskirts", "Fallen Village", "Gylia Lake South West"]
+    },
+    {
+        "territory": "Guild Hall",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cinfras"]
+    },
+    {
+        "territory": "Heart of Decay",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Mushroom Hill", "Decayed Basin", "Lexdale"]
+    },
+    {
+        "territory": "Decayed Basin",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Heart of Decay", "Lexdale", "Mushroom Hill", "Fungal Grove"]
+    },
+    {
+        "territory": "Fungal Grove",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Decayed Basin", "Old Crossroads North", "Old Crossroads South", "Cinfras Outskirts", "Fallen Village"]
+    },
+    {
+        "territory": "Cinfras Outskirts",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cinfras", "Dark Forest Cinfras Transition", "Fungal Grove", "Old Crossroads South", "Dark Forest Village"]
+    },
+    {
+        "territory": "Cinfras",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 2,
+        "conns": ["Guild Hall", "Cinfras Entrance", "Aldorei's River", "Cinfras Outskirts"]
+    },
+    {
+        "territory": "Lexdale",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Viscera Pits East", "Old Crossroads North", "Heart of Decay", "Decayed Basin"]
+    },
+    {
+        "territory": "Old Crossroads North",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Path to Talor", "Old Crossroads South", "Lexdale", "Fungal Grove"]
+    },
+    {
+        "territory": "Old Crossroads South",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Old Crossroads North", "Fungal Grove", "Cinfras Outskirts", "Path to Talor", "Dark Forest Village"]
+    },
+    {
+        "territory": "Dark Forest Village",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Path to Talor", "Cinfras Outskirts", "Kander Mines"]
+    },
+    {
+        "territory": "Cinfras Entrance",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cinfras County Lower", "Mesquis Tower", "Path to Cinfras", "Light Forest North Exit"]
+    },
+    {
+        "territory": "Light Forest North Exit",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cinfras Entrance", "Light Forest South Exit", "Light Forest Canyon"]
+    },
+    {
+        "territory": "Light Forest South Exit",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Light Forest North Exit", "Mantis Nest"]
+    },
+    {
+        "territory": "Viscera Pits East",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Path to Talor", "Viscera Pits West", "Lexdale"]
+    },
+    {
+        "territory": "Path to Talor",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Viscera Pits East", "Old Crossroads North", "Old Crossroads South", "Entrance to Kander", "Kander Mines", "Dark Forest Village"]
+    },
+    {
+        "territory": "Kander Mines",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Path to Talor", "Dark Forest Village", "Mesquis Tower", "Abandoned Manor"]
+    },
+    {
+        "territory": "Mesquis Tower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Cinfras Entrance", "Kander Mines", "Abandoned Manor", "Path to Cinfras"]
+    },
+    {
+        "territory": "Path to Cinfras",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Light Forest East Upper", "Cinfras Entrance", "Mesquis Tower"]
+    },
+    {
+        "territory": "Light Forest Canyon",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Light Forest North Exit", "Light Forest East Mid", "Mantis Nest"]
+    },
+    {
+        "territory": "Mantis Nest",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Light Forest South Exit", "Light Forest Canyon", "Light Forest East Lower", "Aldorei Valley West Entrance", "Aldorei Valley Lower"]
+    },
+    {
+        "territory": "Lexdales Prison",
+        "ore": 0,
+        "crop": 0,
+        "wood": 2,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Twisted Ridge", "Viscera Pits West"]
+    },
+    {
+        "territory": "Viscera Pits West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Twisted Ridge", "Viscera Pits East", "Entrance to Kander", "Lexdales Prison"]
+    },
+    {
+        "territory": "Entrance to Kander",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Path to Talor", "Twisted Ridge", "Gelibord", "Abandoned Manor", "Viscera Pits West"]
+    },
+    {
+        "territory": "Abandoned Manor",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Mesquis Tower", "Lone Farmstead", "Entrance to Kander", "Kander Mines"]
+    },
+    {
+        "territory": "Light Forest East Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Path to Cinfras", "Efilim South East Plains"]
+    },
+    {
+        "territory": "Light Forest East Mid",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Light Forest Canyon", "Light Forest East Lower", "Light Forest West Upper"]
+    },
+    {
+        "territory": "Light Forest East Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Light Forest West Mid", "Mantis Nest", "Hobbit River", "Light Forest East Mid"]
+    },
+    {
+        "territory": "Twisted Ridge",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Lexdales Prison", "Viscera Pits West", "Entrance to Kander"]
+    },
+    {
+        "territory": "Gelibord",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 2,
+        "conns": ["Entrance to Kander", "Lone Farmstead", "Gelibord Corrupted Farm", "Twisted Housing"]
+    },
+    {
+        "territory": "Lone Farmstead",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Twisted Housing", "Abandoned Manor", "Gelibord"]
+    },
+    {
+        "territory": "Efilim East Plains",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Efilim Village", "Efilim South East Plains"]
+    },
+    {
+        "territory": "Efilim Village",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Efilim East Plains", "Efilim South Plains", "Twisted Housing"]
+    },
+    {
+        "territory": "Efilim South Plains",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Efilim Village", "Efilim South East Plains", "Light Forest North Entrance"]
+    },
+    {
+        "territory": "Efilim South East Plains",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Efilim South Plains", "Light Forest East Upper", "Light Forest West Upper", "Efilim East Plains"]
+    },
+    {
+        "territory": "Light Forest West Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Light Forest North Entrance", "Light Forest East Mid", "Efilim South East Plains", "Light Forest West Mid"]
+    },
+    {
+        "territory": "Light Forest West Mid",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Light Forest Entrance", "Light Forest West Lower", "Light Forest East Lower", "Light Forest West Upper"]
+    },
+    {
+        "territory": "Swamp Mountain Transition Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Swamp Mountain Transition Mid"]
+    },
+    {
+        "territory": "Swamp Mountain Transition Mid",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Swamp Mountain Transition Lower", "Swamp Mountain Transition Mid-Upper", "Swamp West Upper"]
+    },
+    {
+        "territory": "Swamp Mountain Transition Mid-Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Swamp Mountain Transition Mid", "Swamp West Upper", "Swamp East Upper", "Swamp Mountain Transition Upper"]
+    },
+    {
+        "territory": "Swamp Mountain Transition Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Swamp Mountain Transition Mid-Upper", "Swamp East Upper", "Olux"]
+    },
+    {
+        "territory": "Olux",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": ["Swamp Mountain Transition Upper", "Entrance to Olux", "Swamp Dark Forest Transition Mid", "Swamp Dark Forest Transition Upper"]
+    },
+    {
+        "territory": "Swamp Dark Forest Transition Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Olux", "Swamp Dark Forest Transition Mid", "Taproot Descent"]
+    },
+    {
+        "territory": "Taproot Descent",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Swamp Dark Forest Transition Upper", "Swamp Dark Forest Transition Mid", "Fortress North", "Gelibord Corrupted Farm", "Gelibord Castle"]
+    },
+    {
+        "territory": "Gelibord Castle",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Taproot Descent", "Gelibord Corrupted Farm"]
+    },
+    {
+        "territory": "Gelibord Corrupted Farm",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Gelibord Castle", "Taproot Descent", "Twisted Housing", "Gelibord"]
+    },
+    {
+        "territory": "Fortress North",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Fortress South", "Taproot Descent", "Mansion of Insanity", "Swamp Dark Forest Transition Lower"]
+    },
+    {
+        "territory": "Swamp Dark Forest Transition Mid",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Taproot Descent", "Swamp Dark Forest Transition Upper", "Olux", "Entrance to Olux", "Swamp Dark Forest Transition Lower"]
+    },
+    {
+        "territory": "Entrance to Olux",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Olux", "Swamp Dark Forest Transition Mid", "Swamp Lower", "Swamp Dark Forest Transition Lower", "Swamp Plains Basin"]
+    },
+    {
+        "territory": "Swamp Plains Basin",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Entrance to Olux", "Swamp Mountain Base", "Swamp East Mid-Upper", "Swamp East Upper"]
+    },
+    {
+        "territory": "Swamp East Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Swamp Mountain Transition Upper", "Swamp Plains Basin", "Swamp Mountain Transition Mid-Upper", "Swamp West Upper", "Swamp East Mid-Upper"]
+    },
+    {
+        "territory": "",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Swamp West Mid-Upper", "Swamp East Upper", "Swamp Mountain Transition Mid-Upper", "Swamp Mountain Transition Mid"]
+    },
+    {
+        "territory": "Swamp West Mid-Upper",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["Swamp West Upper", "Swamp East Mid-Upper", "Swamp West Mid"]
+    },
+    {
+        "territory": "Swamp East Mid-Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Swamp East Mid", "Swamp West Mid-Upper", "Swamp East Upper", "Swamp Plains Basin"]
+    },
+    {
+        "territory": "Swamp Mountain Base",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Swamp Plains Basin", "Swamp Lower", "Sunspark Camp", "Swamp East Mid"]
+    },
+    {
+        "territory": "Swamp Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Entrance to Olux", "Swamp Mountain Base", "Swamp Dark Forest Transition Lower", "Iron Road"]
+    },
+    {
+        "territory": "Swamp Dark Forest Transition Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Fortress North", "Fortress South", "Entrance to Olux", "Swamp Dark Forest Transition Mid", "Forgotten Path", "Swamp Lower"]
+    },
+    {
+        "territory": "Fortress South",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Fortress North", "Mansion of Insanity", "Orc Battlegrounds", "Swamp Dark Forest Transition Lower"]
+    },
+    {
+        "territory": "Mansion of Insanity",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["Twisted Housing", "Fortress South", "Fortress North"]
+    },
+    {
+        "territory": "Twisted Housing",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["Mansion of Insanity", "Efilim Village", "Gelibord Corrupted Farm", "Gelibord", "Lone Farmstead"]
+    },
+    {
+        "territory": "Swamp West Mid",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Swamp East Mid", "Swamp West Mid-Upper", "Swamp West Lower"]
+    },
+    {
+        "territory": "Swamp East Mid",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Swamp East Lower", "Swamp West Mid", "Swamp East Mid-Upper", "Swamp Mountain Base"]
+    },
+    {
+        "territory": "Swamp West Lower",
+        "ore": 2,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Swamp West Mid", "Swamp East Lower", "Llevigar Plains West Upper"]
+    },
+    {
+        "territory": "Swamp West Upper",
+        "ore": 2,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Swamp East Upper", "Swamp Mountain Transition Mid", "Swamp East Mid-Upper", "Swamp West Mid-Upper"]
+    },
+    {
+        "territory": "Swamp East Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Sunspark Camp", "Llevigar Plains East Upper", "Swamp West Lower", "Swamp East Mid"]
+    },
+    {
+        "territory": "Sunspark Camp",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Swamp Mountain Base", "Swamp East Lower", "Llevigar Plains East Upper", "Orc Lake", "Meteor Crater"]
+    },
+    {
+        "territory": "Meteor Crater",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Sunspark Camp", "Sablestone Camp", "Iron Road"]
+    },
+    {
+        "territory": "Iron Road",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Forgotten Path", "Swamp Lower", "Meteor Crater", "Goblin Plains West"]
+    },
+    {
+        "territory": "Forgotten Path",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Swamp Dark Forest Transition Lower", "Iron Road", "Goblin Plains East"]
+    },
+    {
+        "territory": "Llevigar Plains West Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Swamp West Lower", "Llevigar Plains East Upper", "Llevigar Plains West Lower"]
+    },
+    {
+        "territory": "Llevigar Plains East Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Sunspark Camp", "Swamp East Lower", "Llevigar Plains West Upper", "Llevigar Plains East Lower", "Orc Lake"]
+    },
+    {
+        "territory": "Llevigar Plains West Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Llevigar Plains West Upper", "Llevigar Plains East Lower", "Llevigar Farm Plains West"]
+    },
+    {
+        "territory": "Llevigar Plains East Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Llevigar Plains East Upper", "Llevigar Plains West Lower", "Llevigar Farm Plains East", "Orc Lake"]
+    },
+    {
+        "territory": "Orc Lake",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Llevigar Plains East Lower", "Llevigar Plains East Upper", "Sunspark Camp", "Orc Road", "Sablestone Camp"]
+    },
+    {
+        "territory": "Sablestone Camp",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Meteor Crater", "Orc Lake", "Loamsprout Camp", "Goblin Plains West"]
+    },
+    {
+        "territory": "Goblin Plains West",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Iron Road", "Sablestone Camp", "Llevigar Farm", "Goblin Plains East"]
+    },
+    {
+        "territory": "Goblin Plains East",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Forgotten Path", "Goblin Plains West", "Llevigar Farm", "Pre-Light Forest Transition"]
+    },
+    {
+        "territory": "Orc Battlegrounds",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Fortress South", "Leading Fortress"]
+    },
+    {
+        "territory": "Llevigar Farm Plains West",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Llevigar Plains West Lower", "Llevigar Farm Plains East", "Llevigar Gate West"]
+    },
+    {
+        "territory": "Llevigar Farm Plains East",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Orc Road", "Llevigar Gate East", "Llevigar Farm Plains West", "Llevigar Plains East Lower"]
+    },
+    {
+        "territory": "Llevigar Gate West",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Llevigar Gate East", "Llevigar Farm Plains West"]
+    },
+    {
+        "territory": "Llevigar Gate East",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Llevigar", "Llevigar Gate West", "Llevigar Farm Plains East", "Orc Road"]
+    },
+    {
+        "territory": "Orc Road",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Llevigar Gate East", "Llevigar Farm Plains East", "Orc Lake", "Loamsprout Camp"]
+    },
+    {
+        "territory": "Loamsprout Camp",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Orc Road", "Sablestone Camp", "Quartz Mines North West", "Llevigar Farm"]
+    },
+    {
+        "territory": "Llevigar Farm",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Loamsprout Camp", "Quartz Mines North West", "Quartz Mines North East", "Pre-Light Forest Transition", "Goblin Plains East", "Goblin Plains West"]
+    },
+    {
+        "territory": "Pre-Light Forest Transition",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Leading Fortress", "Goblin Plains East", "Llevigar Farm", "Quartz Mines North East"]
+    },
+    {
+        "territory": "Leading Fortress",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Orc Battlegrounds", "Pre-Light Forest Transition", "Road To Light Forest"]
+    },
+    {
+        "territory": "Llevigar",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": ["Llevigar Entrance", "Llevigar Gate East", "Quartz Mines South West"]
+    },
+    {
+        "territory": "Quartz Mines North West",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Loamsprout Camp", "Llevigar Farm", "Quartz Mines South West", "Quartz Mines North East"]
+    },
+    {
+        "territory": "Quartz Mines North East",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Quartz Mines South East", "Pre-Light Forest Transition", "Llevigar Farm", "Quartz Mines North West"]
+    },
+    {
+        "territory": "Quartz Mines South West",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Llevigar", "Quartz Mines North West", "Quartz Mines South East"]
+    },
+    {
+        "territory": "Quartz Mines South East",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Quartz Mines South West", "Quartz Mines North East"]
+    },
+    {
+        "territory": "Road To Light Forest",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Leading Fortress", "Fleris Trail", "Light Forest Entrance"]
+    },
+    {
+        "territory": "Fleris Trail",
+        "ore": 0,
+        "crop": 0,
+        "wood": 2,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Road To Light Forest"]
+    },
+    {
+        "territory": "Light Forest North Entrance",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Light Forest Entrance", "Light Forest West Upper", "Efilim South Plains"]
+    },
+    {
+        "territory": "Light Forest Entrance",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Light Forest North Entrance", "Road To Light Forest", "Light Forest West Mid", "Light Forest South Entrance"]
+    },
+    {
+        "territory": "Light Forest South Entrance",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["Light Forest Entrance", "Light Forest West Lower", "Heavenly Ingress"]
+    },
+    {
+        "territory": "Llevigar Entrance",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Llevigar", "Volcano Lower"]
+    },
+    {
+        "territory": "Volcano Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Llevigar Entrance", "Bloody Beach", "Volcano Upper", "Light Peninsula"]
+    },
+    {
+        "territory": "Bloody Beach",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["Volcano Lower", "Avos Temple", "Corkus Outskirts", "Pirate Town"]
+    }, 
+    {
+        "territory": "Avos Temple",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Bloody Beach", "Avos Workshop", "Corkus Countryside"]
+    }, 
+    {
+        "territory": "Avos Workshop",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Avos Temple"]
+    }, 
+    {
+        "territory": "Corkus Outskirts",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Corkus Countryside", "Bloody Beach", "Corkus Statue"]
+    }, 
+    {
+        "territory": "Corkus Countryside",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Corkus Outskirts", "Avos Temple", "Corkus Mountain", "Corkus City"]
+    }, 
+    {
+        "territory": "Corkus Mountain",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Corkus Countryside", "Corkus Docks", "Corkus Forest North"]
+    }, 
+    {
+        "territory": "Corkus Docks",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Corkus Mountain"]
+    }, 
+    {
+        "territory": "Corkus Forest North",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Corkus City", "Corkus Forest South", "Corkus City South", "Corkus Mountain"]
+    }, 
+    {
+        "territory": "Corkus City",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 2,
+        "conns": ["Corkus Forest North", "Corkus Forest South", "Corkus Countryside", "Corkus City South", "Corkus Castle"]
+    }, 
+    {
+        "territory": "Corkus Castle",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Corkus City"]
+    }, 
+    {
+        "territory": "Corkus Statue",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Corkus Outskirts", "Corkus City Mine"]
+    }, 
+    {
+        "territory": "Corkus Forest South",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Corkus City", "Corkus City South", "Corkus Forest North", "Factory Entrance"]
+    }, 
+    {
+        "territory": "Corkus City South",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Corkus City", "Corkus Forest South", "Corkus Forest North", "Road To Mine", "Factory Entrance", "Fallen Factory"]
+    }, 
+    {
+        "territory": "Road To Mine",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Corkus Sea Cove", "Corkus City South", "Corkus City Mine"]
+    }, 
+    {
+        "territory": "Corkus City Mine",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Corkus Statue", "Road To Mine"]
+    }, 
+    {
+        "territory": "Factory Entrance",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Corkus Forest South", "Corkus City South", "Fallen Factory", "Ruined Houses"]
+    }, 
+    {
+        "territory": "Fallen Factory",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Corkus City South", "Factory Entrance", "Ruined Houses", "Corkus Sea Cove", "Corkus Sea Port"]
+    }, 
+    {
+        "territory": "Corkus Sea Cove",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Corkus City Mine", "Road To Mine", "Fallen Factory", "Corkus Sea Port"]
+    }, 
+    {
+        "territory": "Ruined Houses",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Corkus Sea Port", "Factory Entrance", "Fallen Factory"]
+    }, 
+    {
+        "territory": "Corkus Sea Port",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Ruined Houses", "Fallen Factory", "Corkus Sea Cove", "Lighthouse Plateau"]
+    }, 
+    {
+        "territory": "Lighthouse Plateau",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Corkus Sea Port", "Southern Outpost", "Phinas Farm"]
+    }, 
+    {
+        "territory": "Phinas Farm",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Lighthouse Plateau", "Royal Gate"]
+    }, 
+    {
+        "territory": "Royal Gate",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 2,
+        "emerald": 1,
+        "conns": ["Phinas Farm"]
+    }, 
+    {
+        "territory": "Southern Outpost",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Lighthouse Plateau", "Legendary Island"]
+    }, 
+    {
+        "territory": "Legendary Island",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["Southern Outpost", "Zhight Island"]
+    }, 
+    {
+        "territory": "Zhight Island",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [""]
+    },
+    {
+        "territory": "Entrance to Rodoroc",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [""]
+    }, {
+        "territory": "Eltom",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [""]
+    },
+    {
+        "territory": "Pirate Town",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [""]
+    },
+    {
+        "territory": "Volcano Upper",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [""]
+    },{
+        "territory": "Light Peninsula",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": [""]
     }
 ]

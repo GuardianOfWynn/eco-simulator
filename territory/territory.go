@@ -4,6 +4,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/google/uuid"
 	"github.com/victorbetoni/go-streams/streams"
 )
 
@@ -11,6 +12,13 @@ type RouteStyle uint8
 type BorderStyle uint8
 type ResourceType uint8
 type Treasury uint8
+type TransferDirection uint8
+type Storage map[ResourceType]int64
+
+const (
+	TERRITORY_TO_HQ TransferDirection = iota
+	HQ_TO_TERRITORY
+)
 
 const (
 	CHEAPEST RouteStyle = iota
@@ -38,29 +46,11 @@ const (
 	VERY_HIGH
 )
 
-type Storage struct {
-	StoredEmerald int32
-	StoredOre     int32
-	StoredCrop    int32
-	StoredWood    int32
-	StoredFish    int32
-}
-
-type Claim struct {
-	GlobalTax     uint8
-	AllyTax       uint8
-	GlobalStyle   RouteStyle
-	GlobalBorders BorderStyle
-	Territories   []Territory
-}
-
-func (c *Claim) GetTerritory(name string) *Territory {
-	for _, v := range c.Territories {
-		if strings.ToLower(v.Name) == strings.ToLower(name) {
-			return &v
-		}
-	}
-	return nil
+type ResourceTransference struct {
+	Id        string
+	Direction TransferDirection
+	Storage   Storage
+	Target    *Territory
 }
 
 type BaseTerritory struct {
@@ -94,20 +84,14 @@ func (b *BaseTerritory) CreateTerritoryInstance() *Territory {
 			"damage":       1,
 			"health":       1,
 		},
-		Storage: map[ResourceType]int64{
+		Storage: Storage{
 			CROP:    0,
 			EMERALD: 0,
 			FISH:    0,
 			ORE:     0,
 			WOOD:    0,
 		},
-		PassingResource: map[ResourceType]int64{
-			CROP:    0,
-			EMERALD: 0,
-			FISH:    0,
-			ORE:     0,
-			WOOD:    0,
-		},
+		PassingResource: []ResourceTransference{},
 		ProductionMultipliers: map[ResourceType]float32{
 			CROP:    b.CropMultiplier,
 			EMERALD: b.EmeraldMultiplier,
@@ -144,9 +128,9 @@ type Territory struct {
 	Treasury              Treasury
 	RouteStyle            RouteStyle
 	Borders               BorderStyle
-	Storage               map[ResourceType]int64
-	PassingResource       map[ResourceType]int64
+	Storage               Storage
 	ProductionMultipliers map[ResourceType]float32
+	PassingResource       []ResourceTransference
 	TargetTerritory       string
 	lastResourceProduced  int64
 	lastEmeraldProduced   int64
@@ -157,11 +141,6 @@ type Territory struct {
 	Bonuses               map[string]uint8
 	Upgrades              map[string]uint8
 	Connections           []string
-}
-
-type PassingResource struct {
-	Target    string
-	Resources Storage
 }
 
 func (t *Territory) GetTowerDamageLow() int32 {
@@ -209,8 +188,8 @@ func (t *Territory) GetResourceStorageSize() int32 {
 }
 
 // GetResourceCost: Retrieves the resource costs per second for territory
-func (t *Territory) GetResourceCosts() map[ResourceType]int64 {
-	costs := map[ResourceType]int64{
+func (t *Territory) GetResourceCosts() Storage {
+	costs := Storage{
 		CROP:    0,
 		EMERALD: 0,
 		FISH:    0,
@@ -228,34 +207,65 @@ func (t *Territory) GetResourceCosts() map[ResourceType]int64 {
 }
 
 func (t *Territory) Tick() {
+
 	currentTimeMillis := time.Now().UnixMilli()
-	if currentTimeMillis-t.lastConsumedResource >= 1000 {
-		t.lastConsumedResource = currentTimeMillis
-		t.ConsumeResources(t.GetResourceCosts())
-	}
+
+	// Store emerald
 	if currentTimeMillis-t.lastEmeraldProduced >= t.GetEmeraldRate()*1000 {
 		t.lastEmeraldProduced = currentTimeMillis
 		t.Storage[EMERALD] = t.Storage[EMERALD] + int64(t.GetProducedEmerald())
 	}
+
+	// Store resource
 	if currentTimeMillis-t.lastResourceProduced >= t.GetResourceRate()*1000 {
 		t.lastEmeraldProduced = currentTimeMillis
 		for k, v := range t.Storage {
 			t.Storage[k] = v + int64(t.GetProducedResource())
 		}
 	}
-	if currentTimeMillis-t.lastResourceTransfer >= 60000 {
-		t.TransferResource(t.Claim.GetTerritory(t.TargetTerritory))
+
+	if currentTimeMillis-t.lastConsumedResource >= 1000 {
+
 	}
+
+	// Consume resources
+	if currentTimeMillis-t.lastConsumedResource >= 1000 {
+		t.lastConsumedResource = currentTimeMillis
+		cost := t.GetResourceCosts()
+		t.ConsumeResources(cost)
+		t.Claim.AskForResources(t, cost)
+	}
+
+	// Transfer resource
+	if currentTimeMillis-t.lastResourceTransfer >= 60000 {
+		t.TransferResource(ResourceTransference{
+			Id:        uuid.NewString(),
+			Target:    t.Claim.GetHQ(),
+			Direction: TERRITORY_TO_HQ,
+			Storage:   t.Storage,
+		})
+		for _, r := range t.PassingResource {
+			t.TransferResource(r)
+		}
+		t.PassingResource = []ResourceTransference{}
+		t.ConsumeResources(t.Storage) // Reset storage
+	}
+
 }
 
-func (t *Territory) TransferResource(target *Territory) {
+func (t *Territory) TransferResource(transf ResourceTransference) {
+	target := transf.Target
+	if transf.Direction == TERRITORY_TO_HQ {
+		target = t.Claim.GetHQ()
+		transf.Target = target
+	}
 	for _, conn := range t.Connections {
 		if strings.ToLower(conn) == strings.ToLower(target.Name) {
-			target.ReceiveResource(nil, t.PassingResource)
+			target.ReceiveResource(transf)
 			return
 		}
 	}
-	pathfinder := Pathfinder{
+	/*pathfinder := Pathfinder{
 		From:       t,
 		Target:     t.Claim.GetTerritory(t.TargetTerritory),
 		Claim:      *t.Claim,
@@ -263,30 +273,31 @@ func (t *Territory) TransferResource(target *Territory) {
 	}
 	route := pathfinder.Route()
 	if len(route) > 0 {
-		route[0].ReceiveResource(target, t.PassingResource)
-	}
+		//route[0].ReceiveResource(transf)
+	}*/
 }
 
-func (t *Territory) ReceiveResource(target *Territory, resources map[ResourceType]int64) {
-	if t.Name == target.Name {
-		t.StoreResource(resources)
+func (t *Territory) ReceiveResource(transference ResourceTransference) {
+	if t.Name == transference.Target.Name {
+		t.StoreResource(transference.Storage)
 	} else {
-		t.PassingResource = resources
-		t.TargetTerritory = target.Name
+		t.PassingResource = append(t.PassingResource, transference)
 	}
 }
 
-func (t *Territory) ConsumeResources(costs map[ResourceType]int64) {
+func (t *Territory) ConsumeResources(costs Storage) {
 	for k, v := range costs {
 		stored := t.Storage[k]
 		if (stored - v) < 0 {
-			passing := t.PassingResource[k]
-			if passing+stored-v < 0 {
-				t.resourceGap = true
-			} else {
-				t.Storage[k] = 0
-				t.PassingResource[k] = passing + stored - v
-				t.resourceGap = false
+			for _, transference := range t.PassingResource {
+				passing := transference.Storage[k]
+				if passing+stored-v < 0 {
+					t.resourceGap = true
+				} else {
+					t.Storage[k] = 0
+					transference.Storage[k] = passing + stored - v
+					t.resourceGap = false
+				}
 			}
 		} else {
 			t.resourceGap = false
@@ -295,7 +306,7 @@ func (t *Territory) ConsumeResources(costs map[ResourceType]int64) {
 	}
 }
 
-func (t *Territory) StoreResource(resources map[ResourceType]int64) {
+func (t *Territory) StoreResource(resources Storage) {
 	storage := 0
 	for k, v := range resources {
 		if k == EMERALD {
