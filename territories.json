@@ -568,6 +568,15 @@
         "conns": ["Military Base Upper", "Path To Military Base", "Gylia Lake North East"]
     },
     {
+        "territory": "Path To Military Base",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Military Base", "Thanos"]
+    },
+    {
         "territory": "Path To Ozoth's Spire Lower",
         "ore": 1,
         "crop": 0,
@@ -1941,5 +1950,1787 @@
         "fish": 0.25,
         "emerald": 0.2,
         "conns": [""]
+    },{
+        "territory": "Lost Atoll",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 2,
+        "emerald": 1,
+        "conns": ["Volcano Upper", "Tree Island", "Pirate Town"]
+      },
+    {
+        "territory": "Light Peninsula",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Hobbit River", "Volcano Lower", "Volcano Upper", "Tree Island"]
+      },
+    {
+        "territory": "Light Forest West Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Hobbit River", "Light Forest West Mid", "Light Forest South Entrance"]
+    },
+    {
+        "territory": "Aldorei Valley West Entrance",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Aldorei Valley Lower", "Mantis Nest", "Hobbit River"]
+      },
+    {
+        "territory": "Hobbit River",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Light Forest West Lower", "Light Forest East Lower", "Aldorei Valley West Entrance", "Light Peninsula"]
+      },
+      {
+        "territory": "Volcano Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Volcano Lower", "Tree Island", "Pirate Town", "Lost Atoll", "Light Peninsula"]
+      },
+    {
+        "territory": "Tree Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Light Peninsula", "Volcano Upper", "Maro Peaks", "Lost Atoll"]
+      },
+      {
+        "territory": "Maro Peaks",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Tree Island", "Skiens Island"]
+      },
+      {
+        "territory": "Pirate Town",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Volcano Upper", "Lost Atoll", "Zhight Island", "Bloody Beach"]
+      },
+      {
+        "territory": "Zhight Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Pirate Town", "The Bear Zoo", "Legendary Island"]
+      },
+
+    {
+        "territory": "The Bear Zoo",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Zhight Island", "Rooster Island"]
+    },
+    {
+        "territory": "Rooster Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Nemract Town", "The Bear Zoo", "Durum Isles Lower"]
+    },
+    {
+        "territory": "Selchar",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 2,
+        "conns": ["Skiens Island", "Rooster Island", "Durum Isles Lower", "Durum Isles Center", "Durum Isles Upper"]
+      },
+    {
+        "territory": "Nodguj Nation",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Durum Isles Upper", "Skiens Island", "Mage Island", "Icy Island", "Santa's Hideout", "Dujgon Nation"]
+    },
+    {
+        "territory": "Skiens Island",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Maro Peaks", "Nodguj Nation", "Selchar", "Dead Island South West"]
+      },
+    {
+        "territory": "Durum Isles Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Rooster Island", "Selchar", "Durum Isles Center", "Cathedral Harbour"]
+    },
+    {
+        "territory": "Durum Isles Center",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Durum Isles Lower", "Durum Isles East", "Durum Isles Upper", "Selchar"]
+    },
+    {
+        "territory": "Durum Isles Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Nodguj Nation", "Mage Island", "Selchar", "Durum Isles Center"]
+    },
+    {
+        "territory": "Durum Isles East",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Durum Isles Center", "Mage Island", "Cathedral Harbour"]
+    },
+    {
+        "territory": "Dead Island North West",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.25,
+        "conns": ["Durum Isles Center", "Mage Island"]
+    },
+    {
+        "territory": "Dead Island North East",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Dead Island South East", "Dead Island North West", "Jofash Docks"]
+    },
+    {
+        "territory": "Dead Island South West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Dujgon Nation", "Skiens Island", "Dead Island North West", "Dead Island South East"]
+    },
+    {
+        "territory": "Dead Island South East",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Dujgon Nation", "Regular Island", "Dead Island South West", "Dead Island North East"]
+    },
+    {
+        "territory": "Jofash Docks",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Jofash Tunnel", "Regular Island", "Dead Island North East"]
+    },
+    {
+        "territory": "Jofash Tunnel",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Jofash Docks", "Sky Island Ascent"]
+    },
+    {
+        "territory": "Regular Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Jofash Docks", "Dead Island South East", "Dujgon Nation", "Icy Island"]
+    },
+    {
+        "territory": "Dujgon Nation",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Dead Island South East", "Dead Island South West", "Nodguj Nation", "Regular Island", "Icy Island"]
+    },
+    {
+        "territory": "Icy Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Nodguj Nation", "Dujgon Nation", "Santa's Hideout", "Regular Island"]
+    },
+    {
+        "territory": "Santa's Hideout",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["Nodguj Nation", "Icy Island", "Mage Island"]
+    },
+    {
+        "territory": "Mage Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Half Moon Island", "Santa's Hideout", "Nodguj Nation", "Durum Isles East", "Durum Isles Upper"]
+    },
+    {
+        "territory": "Half Moon Island",
+        "ore": 0,
+        "crop": 2,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Mage Island"]
+    },{
+        "territory": "The Silent Road",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Mine Base Plains", "The Broken Road"]
+    },
+    {
+        "territory": "The Broken Road",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["The Silent Road", "Worm Tunnel"]
+    },
+    {
+        "territory": "Worm Tunnel",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["The Broken Road", "Grey Ruins"]
+    },
+    {
+        "territory": "Grey Ruins",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Worm Tunnel", "Forgotten Town"]
+    },
+    {
+        "territory": "Forgotten Town",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Grey Ruins", "Forest of Eyes"]
+    },
+    {
+        "territory": "Forest of Eyes",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Forgotten Town", "Sinister Forest"]
+    },
+    {
+        "territory": "Sinister Forest",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Forest of Eyes", "Lutho"]
+    },
+    {
+        "territory": "Lutho",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": ["Sinister Forest", "Paths of Sludge"]
+    },
+    {
+        "territory": "Paths of Sludge",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Lutho", "Toxic Drip"]
+    },
+    {
+        "territory": "Toxic Drip",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Paths of Sludge", "Toxic Caves", "Gateway to Nothing"]
+    },
+    {
+        "territory": "Toxic Caves",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Toxic Drip"]
+    },
+    {
+        "territory": "Void Valley",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Gateway to Nothing"]
+    },
+    {
+        "territory": "Gateway to Nothing",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Void Valley", "Final Step", "Toxic Drip"]
+    },
+    {
+        "territory": "Final Step",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Gateway to Nothing", "Bizarre Passage"]
+    },
+    {
+        "territory": "Bizarre Passage",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Final Step", "The Gate"]
+    },
+    {
+        "territory": "The Gate",
+        "ore": 0,
+        "crop": 2,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Bizarre Passage"]
+    },
+    {
+        "territory": "Twain Mansion",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 2,
+        "conns": ["Twain Lake"]
+    },
+    {
+        "territory": "Twain Lake",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Twain Mansion", "Nesaak Plains South West"]
+    },
+    {
+        "territory": "Nesaak Plains South West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Twain Lake", "Nesaak Village", "Nesaak Plains South East", "Nesaak Bridge Transition", "Icy Descent"]
+    },
+    {
+        "territory": "Icy Descent",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Lusuco", "Tower of Ascension", "Nesaak Plains South West"]
+    },
+    {
+        "territory": "Lusuco",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": ["Icy Descent"]
+    },
+    {
+        "territory": "Tower of Ascension",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["Icy Descent"]
+    },
+    {
+        "territory": "Great Bridge Nesaak",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Great Bridge Jungle", "Nesaak Bridge Transition"]
+    },
+    {
+        "territory": "Nesaak Bridge Transition",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Great Bridge Nesaak", "Nesaak Plains South West"]
+    },
+    {
+        "territory": "Nesaak Village",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 2,
+        "conns": ["Nesaak Plains South West", "Nesaak Plains South East", "Nesaak Plains North East", "Bob's Tomb", "Nesaak Plains Lower North West"]
+    },
+    {
+        "territory": "Nesaak Plains South East",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Nesaak Plains South West", "Nesaak Village", "Bob's Tomb"]
+    },
+    {
+        "territory": "Bob's Tomb",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Nesaak Plains North East", "Nesaak Village", "Nesaak Plains South East"]
+    },
+    {
+        "territory": "Nesaak Plains North East",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Nesaak Transition", "Nesaak Plains Upper North West", "Nesaak Village", "Bob's Tomb", "Nesaak Plains Lower North West"]
+    },
+    {
+        "territory": "Nesaak Transition",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Elkurn", "Nether Plains Lower", "Desolate Valley", "Nesaak Plains North East"]
+    },
+    {
+        "territory": "Nesaak Plains Upper North West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Nesaak Plains North East", "Elkurn", "Sanctuary Bridge", "Nesaak Plains Mid North West", "Nesaak Plains Lower North West"]
+    },
+    {
+        "territory": "Nesaak Plains Lower North West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Nesaak Plains Mid North West", "Nesaak Plains Upper North West", "Nesaak Plains South West", "Nesaak Village", "Nesaak Plains North East"]
+    },
+    {
+        "territory": "Nesaak Plains Mid North West",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Nesaak Plains Upper North West", "Nesaak Plains Lower North West"]
+    },
+    {
+        "territory": "Temple of Legends",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["City of Troms", "Jungle Lake"]
+    },
+    {
+        "territory": "City of Troms",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 2,
+        "conns": ["South Pigmen Ravines", "Temple of Legends", "Jungle Lake"]
+    },
+    {
+        "territory": "Jungle Lake",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Temple of Legends", "City of Troms", "Herb Cave", "Jungle Mid"]
+    },
+    {
+        "territory": "Herb Cave",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Jungle Lake", "Great Bridge Jungle"]
+    },
+    {
+        "territory": "Dernel Jungle Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 2,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Dernel Jungle Mid"]
+    },
+    {
+        "territory": "Jungle Upper",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["Jungle Mid", "Dernel Jungle Mid"]
+    },
+    {
+        "territory": "Jungle Mid",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Jungle Upper", "Jungle Lower", "Jungle Lake"]
+    },
+    {
+        "territory": "Jungle Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Jungle Mid", "Great Bridge Jungle", "Dernel Jungle Lower"]
+    },
+    {
+        "territory": "Great Bridge Jungle",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Jungle Lower", "Herb Cave", "Great Bridge Nesaak"]
+    },
+    {
+        "territory": "Dernel Jungle Mid",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Dernel Jungle Upper"]
+    },
+    {
+        "territory": "Dernel Jungle Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Jungle Lower", "Dernel Jungle Mid"]
+    },
+    {
+        "territory": "Little Wood",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Time Valley", "South Pigmen Ravines"]
+    },
+    {
+        "territory": "Time Valley",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Elkurn Fields", "Sanctuary Bridge", "Abandoned Farm", "Little Wood"]
+    },
+    {
+        "territory": "Sanctuary Bridge",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Time Valley", "Nesaak Plains Upper North West"]
+    },
+    {
+        "territory": "Elkurn Fields",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Road to Elkurn", "Elkurn", "South Nivla Woods", "Time Valley"]
+    },
+    {
+        "territory": "Elkurn",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Elkurn Fields", "Nesaak Plains Upper North West", "Road to Elkurn", "Nether Plains Lower", "Nesaak Transition", "Corrupted Road"]
+    },
+    {
+        "territory": "South Pigmen Ravines",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Pigmen Ravines Entrance", "Little Wood", "City of Troms"]
+    },
+    {
+        "territory": "Pigmen Ravines Entrance",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Pigmen Ravines", "Ragni", "South Pigmen Ravines"]
+    },
+    {
+        "territory": "Pigmen Ravines",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["South Pigmen Ravines", "Abandoned Farm"]
+    },
+    {
+        "territory": "Abandoned Farm",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Pigmen Ravines", "Time Valley"]
+    },
+    {
+        "territory": "Ragni",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": ["Pigmen Ravines Entrance", "Ragni Main Entrance", "Ragni North Entrance"]
+    },
+    {
+        "territory": "Ragni North Entrance",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Ragni", "Katoa Ranch", "Ragni North Suburbs"]
+    },
+    {
+        "territory": "Katoa Ranch",
+        "ore": 0,
+        "crop": 2,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Ragni Main Entrance", "Ragni North Suburbs"]
+    },
+    {
+        "territory": "Ragni North Suburbs",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Ragni North Entrance", "Katoa Ranch", "Ragni Plains"]
+    },
+    {
+        "territory": "Coastal Trail",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Ragni Plains", "Maltic Coast", "Maltic"]
+    },
+    {
+        "territory": "Ragni Plains",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Maltic", "Ragni North Suburbs", "Coastal Trail", "Ragni East Suburbs"]
+    },
+    {
+        "territory": "Ragni East Suburbs",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Ragni Main Entrance", "Maltic Plains", "Ragni Plains"]
+    },
+    {
+        "territory": "Ragni Main Entrance",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Ragni", "Ragni East Suburbs", "Emerald Trail"]
+    },
+    {
+        "territory": "Maltic Coast",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Coastal Trail", "Maltic", "South Farmers Valley", "North Farmers Valley"]
+    },
+    {
+        "territory": "Maltic",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["South Farmers Valley", "Maltic Coast", "Coastal Trail", "Ragni Plains", "Maltic Plains"]
+    },
+    {
+        "territory": "Maltic Plains",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Plains", "Ragni East Suburbs", "Maltic", "Emerald Trail", "South Farmers Valley"]
+    },
+    {
+        "territory": "Emerald Trail",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Ragni Main Entrance", "Nivla Woods Entrance", "Maltic Plains"]
+    },
+    {
+        "territory": "South Farmers Valley",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["North Farmers Valley", "Plains", "Maltic", "Maltic Coast", "Maltic Plains"]
+    },
+    {
+        "territory": "Plains",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Maltic Plains", "South Farmers Valley", "Arachnid Route", "North Nivla Woods", "Nivla Woods Entrance"]
+    },
+    {
+        "territory": "Nivla Woods Entrance",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Road to Time Valley", "Emerald Trail", "Nivla Woods", "Plains"]
+    },
+    {
+        "territory": "Road to Time Valley",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["South Nivla Woods", "Nivla Woods Entrance", "Nivla Woods"]
+    },
+    {
+        "territory": "North Farmers Valley",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["South Farmers Valley", "Plains Coast", "Maltic Coast"]
+    },
+    {
+        "territory": "Nivla Woods",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Nivla Woods Entrance", "South Nivla Woods", "Nivla Woods Exit", "Road to Time Valley"]
+    },
+    {
+        "territory": "South Nivla Woods",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Elkurn Fields", "Road to Elkurn", "Road to Time Valley", "Nivla Woods", "Nivla Woods Exit"]
+    },
+    {
+        "territory": "Arachnid Route",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Plains", "Nemract Plains West", "North Nivla Woods"]
+    },
+    {
+        "territory": "North Nivla Woods",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Arachnid Route", "Plains", "Nivla Woods Edge", "Nivla Woods Exit"]
+    },
+    {
+        "territory": "Nivla Woods Exit",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["North Nivla Woods", "Nivla Woods", "Nivla Woods Edge", "Elkurn Fields"]
+    },
+    {
+        "territory": "Plains Coast",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Nemract Town", "Nemract Quarry", "North Farmers Valley"]
+    },
+    {
+        "territory": "Nemract Quarry",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Plains Coast", "Nemract Road", "Nemract Plains West"]
+    },
+    {
+        "territory": "Nemract Plains West",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Arachnid Route", "Nivla Woods Edge", "Nemract Road", "Nemract Quarry"]
+    },
+    {
+        "territory": "Nivla Woods Edge",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["North Nivla Woods", "Nivla Woods Exit", "Detlas Far Suburbs", "Road to Elkurn", "Nemract Plains West"]
+    },
+    {
+        "territory": "Road to Elkurn",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["South Nivla Woods", "Elkurn Fields", "Elkurn", "Nivla Woods Edge"]
+    },
+    {
+        "territory": "Nemract Town",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": ["Plains Coast", "Nemract Road", "Nemract Cathedral", "Rooster Island"]
+    },
+    {
+        "territory": "Nemract Road",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Ancient Nemract", "Nemract Town", "Nemract Cathedral", "Nemract Quarry", "Nemract Plains West", "Nemract Plains East"]
+    },
+    {
+        "territory": "Nemract Plains East",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Nemract Road", "Detlas Trail West Plains"]
+    },
+    {
+        "territory": "Detlas Trail West Plains",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Nemract Plains East", "Ancient Nemract", "Detlas Suburbs", "Detlas Far Suburbs"]
+    },
+    {
+        "territory": "Detlas Far Suburbs",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["Corrupted Road", "Nether Plains Upper", "Detlas Suburbs", "Detlas Trail West Plains", "Nivla Woods Edge"]
+    },
+    {
+        "territory": "Corrupted Road",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Detlas Far Suburbs", "Nether Plains Upper", "Elkurn", "Nether Gate"]
+    },
+    {
+        "territory": "Nemract Cathedral",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Nemract Town", "Ancient Nemract", "Nemract Road", "Cathedral Harbour"]
+    },
+    {
+        "territory": "Ancient Nemract",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Nemract Cathedral", "Cathedral Harbour", "Nemract Road", "Detlas Trail East Plains", "Detlas Trail West Plains"]
+    },
+    {
+        "territory": "Desert East Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Desert East Mid"]
+    },
+    {
+        "territory": "Desert East Mid",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Desert East Upper", "Desert Mid-Upper", "Desert East Lower"]
+    },
+    {
+        "territory": "Desert East Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Desert East Mid", "Desert Mid-Lower", "Rymek East Upper"]
+    },
+    {
+        "territory": "Rymek East Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Rymek West Upper", "Rymek East Mid", "Desert East Lower"]
+    },
+    {
+        "territory": "Rymek East Mid",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Rymek East Upper", "Rymek East Lower", "Rymek West Mid"]
+    },
+    {
+        "territory": "Rymek East Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Rymek West Lower", "Rymek East Mid"]
+    },
+    {
+        "territory": "Mummy's Tomb",
+        "ore": 0,
+        "crop": 2,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Desert Upper"]
+    },
+    {
+        "territory": "Desert Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Mummy's Tomb", "Desert West Upper", "Desert Mid-Upper"]
+    },
+    {
+        "territory": "Desert Mid-Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Almuj City", "Desert Upper", "Desert Mid-Lower", "Desert East Mid"]
+    },
+    {
+        "territory": "Desert Mid-Lower",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Desert West Lower", "Desert Mid-Upper", "Almuj City", "Desert Lower", "Desert East Lower"]
+    },
+    {
+        "territory": "Desert Lower",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Desert West Lower", "Desert Mid-Lower", "Rymek West Upper"]
+    },
+    {
+        "territory": "Rymek West Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Desert West Lower", "Desert Lower", "Rymek East Upper", "Rymek West Mid"]
+    },
+    {
+        "territory": "Rymek West Mid",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["Rymek West Upper", "Rymek East Mid", "Rymek West Lower"]
+    },
+    {
+        "territory": "Rymek West Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Rymek East Lower", "Rymek West Mid"]
+    },
+    {
+        "territory": "Desert West Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Almuj City", "Desert Upper"]
+    },
+    {
+        "territory": "Almuj City",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": ["Savannah East Upper", "Desert West Upper", "Desert Mid-Upper", "Desert Mid-Lower", "Desert West Lower"]
+    },
+    {
+        "territory": "Desert West Lower",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Desert Mid-Lower", "Desert Lower", "Almuj City", "Rymek West Upper"]
+    },
+    {
+        "territory": "Lion Lair",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Bremminglar"]
+    },
+    {
+        "territory": "Bremminglar",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Lion Lair", "Savannah West Upper"]
+    },
+    {
+        "territory": "Savannah East Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Almuj City", "Savannah East Lower", "Savannah West Upper"]
+    },
+    {
+        "territory": "Savannah West Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Savannah East Upper", "Bremminglar", "Savannah West Lower", "Cathedral Harbour"]
+    },
+    {
+        "territory": "Savannah West Lower",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Savannah East Lower", "Savannah West Upper", "Ternaves Plains Upper", "Detlas Savannah Transition"]
+    },
+    {
+        "territory": "Savannah East Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Savannah West Lower", "Ternaves", "Savannah East Upper"]
+    },
+    {
+        "territory": "Ternaves Plains Upper",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Ternaves", "Savannah West Lower", "Detlas Savannah Transition", "Ternaves Plains Lower"]
+    },
+    {
+        "territory": "Ternaves",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Ternaves Plains Upper", "Ternaves Plains Lower", "Savannah East Lower"]
+    },
+    {
+        "territory": "Ternaves Plains Lower",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Mining Base Upper", "Mine Base Plains", "Ternaves", "Ternaves Plains Upper", "Abandoned Pass"]
+    },
+    {
+        "territory": "Mining Base Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Mine Base Plains", "Abandoned Pass", "Mining Base Lower", "Ternaves Plains Lower"]
+    },
+    {
+        "territory": "Abandoned Pass",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Ternaves Plains Lower", "Mining Base Upper"]
+    },
+    {
+        "territory": "Mining Base Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Mining Base Upper", "Mine Base Plains"]
+    },
+    {
+        "territory": "Cathedral Harbour",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Nemract Cathedral", "Ancient Nemract", "Detlas Trail East Plains", "Savannah West Upper", "Durum Isles Lower", "Durum Isles East"]
+    },
+    {
+        "territory": "Detlas Trail East Plains",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Detlas Suburbs", "Detlas", "Detlas Close Suburbs", "Ancient Nemract", "Cathedral Harbour"]
+    },
+    {
+        "territory": "Detlas",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": ["Detlas Trail East Plains", "Detlas Savannah Transition", "Detlas Close Suburbs"]
+    },
+    {
+        "territory": "Plains Lake",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Nether Plains Upper", "Nether Gate", "Desolate Valley", "Mine Base Plains"]
+    },
+    {
+        "territory": "Desolate Valley",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Nether Plains Lower", "Nesaak Transition", "Plains Lake"]
+    },
+    {
+        "territory": "Detlas Savannah Transition",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Mine Base Plains", "Ternaves Plains Upper", "Savannah West Lower", "Detlas"]
+    },
+    {
+        "territory": "Mine Base Plains",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Detlas Savannah Transition", "Ternaves Plains Lower", "Mining Base Upper", "Mining Base Lower", "The Silent Road", "Plains Lake"]
+    },
+    {
+        "territory": "Nether Plains Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Detlas Close Suburbs", "Detlas Suburbs", "Detlas Far Suburbs", "Corrupted Road", "Nether Gate", "Plains Lake"]
+    },
+    {
+        "territory": "Detlas Close Suburbs",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Detlas Suburbs", "Detlas", "Nether Plains Upper", "Detlas Trail East Plains"]
+    },
+    {
+        "territory": "Detlas Suburbs",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Detlas Close Suburbs", "Detlas Far Suburbs", "Nether Plains Upper", "Detlas Trail West Plains", "Detlas Trail East Plains"]
+    },
+    {
+        "territory": "Nether Gate",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Nether Plains Upper", "Plains Lake", "Nether Plains Lower", "Corrupted Road"]
+    },
+    {
+        "territory": "Nether Plains Lower",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Nesaak Transition", "Nether Gate", "Desolate Valley", "Elkurn"]
+    },
+    {
+        "territory": "Eltom",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Ranol's Farm","Entrance to Rodoroc"]
+    },
+    {
+        "territory": "Entrance to Rodoroc",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Eltom", "Thesead Suburbs", "Rodoroc"]
+    },
+    {
+        "territory": "Rodoroc",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 2,
+        "conns": ["Entrance to Rodoroc", "Crater Descent"]
+    },
+    {
+        "territory": "Volcanic Slope",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["Active Volcano", "Lava Lake"]
+    },
+    {
+        "territory": "Active Volcano",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Lava Lake", "Volcanic Slope", "Lava Lake Bridge"]
+    },
+    {
+        "territory": "Lava Lake",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Active Volcano", "Volcanic Slope","Molten Heights Portal"]
+    },
+    {
+        "territory": "Lava Lake Bridge",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Crater Descent", "Molten Heights Portal", "Active Volcano"]
+    },
+    {
+        "territory": "Crater Descent",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Rodoroc", "Lava Lake Bridge", "Molten Heights Portal"]
+    },
+    {
+        "territory": "Molten Reach",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Molten Heights Portal", "Angel Refuge"]
+    },
+    {
+        "territory": "Molten Heights Portal",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Lava Lake", "Lava Lake Bridge", "Crater Descent", "Molten Reach"]
+    },
+    {
+        "territory": "Astraulus' Tower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Dragonling Nests", "Swamp Island"]
+    },
+    {
+        "territory": "Dragonling Nests",
+        "ore": 0,
+        "crop": 0,
+        "wood": 2,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Snail Island", "Astraulus' Tower"]
+    },
+    {
+        "territory": "Old Coal Mine",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["Kandon Ridge"]
+    },
+    {
+        "territory": "Snail Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Dragonling Nests", "Temple Island"]
+    },
+    {
+        "territory": "Swamp Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Ahmsord Outskirts", "Temple Island", "Astraulus' Tower"]
+    },
+    {
+        "territory": "Ahmsord Outskirts",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Swamp Island", "Angel Refuge", "Wybel Island", "Central Islands"]
+    },
+    {
+        "territory": "Angel Refuge",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Molten Reach", "Ahmsord Outskirts"]
+    },
+    {
+        "territory": "Kandon Ridge",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Old Coal Mine", "Kandon Farm", "Temple Island", "Path to Ahmsord Upper"]
+    },
+    {
+        "territory": "Temple Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Snail Island", "Swamp Island", "Central Islands", "Ahmsord", "Kandon Ridge"]
+    },
+    {
+        "territory": "Central Islands",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Ahmsord", "Temple Island", "Ahmsord Outskirts", "Wybel Island", "Sky Island Ascent"]
+    },
+    {
+        "territory": "Wybel Island",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Central Islands", "Sky Falls", "Ahmsord Outskirts"]
+    },
+    {
+        "territory": "Sky Falls",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Wybel Island", "Frozen Fort", "Sky Island Ascent"]
+    },
+    {
+        "territory": "Frozen Fort",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Sky Falls"]
+    },
+    {
+        "territory": "Kandon Farm",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Kandon Ridge"]
+    },
+    {
+        "territory": "Path to Ahmsord Upper",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Kandon Ridge", "Ahmsord", "Path to Ahmsord Lower"]
+    },
+    {
+        "territory": "Ahmsord",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 2,
+        "conns": ["Sky Island Ascent", "Path to Ahmsord Lower", "Path to Ahmsord Upper", "Temple Island", "Central Islands"]
+    },
+    {
+        "territory": "Sky Island Ascent",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Sky Falls", "Raider's Base Upper", "Central Islands", "Jofash Tunnel", "Ahmsord"]
+    },
+    {
+        "territory": "Raider's Base Upper",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Sky Island Ascent", "Raider's Base Lower"]
+    },
+    {
+        "territory": "Raider's Base Lower",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Raider's Base Upper"]
+    },
+    {
+        "territory": "Path to Ahmsord Lower",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Path to Ahmsord Upper", "Ahmsord", "Sky Castle"]
+    },
+    {
+        "territory": "Sky Castle",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Path to Ahmsord Lower"]
+    },
+    {
+        "territory": "Heavenly Ingress",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Light Forest South Entrance", "Field of Life"]
+    },
+    {
+        "territory": "Luminous Plateau",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Field of Life"]
+    },
+    {
+        "territory": "Primal Fen",
+        "ore": 1,
+        "crop": 0,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Field of Life"]
+    },
+    {
+        "territory": "Azure Frontier",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Field of Life", "Path to Light", "Otherwordly Monolith"]
+    },
+    {
+        "territory": "Path to Light",
+        "ore": 0,
+        "crop": 0,
+        "wood": 0,
+        "fish": 1,
+        "emerald": 1,
+        "conns": ["Otherwordly Monolith", "Azure Frontier"]
+    },
+    {
+        "territory": "Field of Life",
+        "ore": 0,
+        "crop": 0,
+        "wood": 1,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Primal Fen", "Luminous Plateau", "Heavenly Ingress", "Azure Frontier"]
+    },
+    {
+        "territory": "Nexus of Light",
+        "ore": 0.25,
+        "crop": 0.25,
+        "wood": 0.25,
+        "fish": 0.25,
+        "emerald": 0.2,
+        "conns": ["Azure Frontier"]
+    },
+    {
+        "territory": "Otherwordly Monolith",
+        "ore": 0,
+        "crop": 1,
+        "wood": 0,
+        "fish": 0,
+        "emerald": 1,
+        "conns": ["Azure Frontier", "Path to Light"]
     }
+
 ]
