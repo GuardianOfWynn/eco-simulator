@@ -260,7 +260,7 @@ func (t *Territory) TransferResource(transf ResourceTransference) {
 		transf.Target = target
 	}
 	for _, conn := range t.Connections {
-		if strings.ToLower(conn) == strings.ToLower(target.Name) {
+		if strings.EqualFold(conn, target.Name) {
 			target.ReceiveResource(transf)
 			return
 		}

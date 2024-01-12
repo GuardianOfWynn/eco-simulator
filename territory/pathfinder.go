@@ -23,7 +23,7 @@ type Node struct {
 }
 
 func (n *Node) Tag() interface{} {
-	return n.Territory
+	return n.Territory.Name
 }
 
 func (n *Node) Key() float64 {
@@ -73,8 +73,7 @@ func (p *Pathfinder) Route() []*Territory {
 
 		visited[tag] = true
 		fromNode := nodesMap[tag]
-
-		for _, conn := range nodesMap[tag].Conns {
+		for _, conn := range nodes[tag].Connections {
 			if !visited[conn] {
 				edgeWeight := 1 // if territory has tax, increase this value
 				toNode := nodesMap[conn]
@@ -98,10 +97,9 @@ func (p *Pathfinder) Route() []*Territory {
 		currentNode = previous[currentNode]
 	}
 
-	reversed := []*Territory{}
 	for i, j := 0, len(path)-1; i < j; i, j = i+1, j-1 {
-		reversed[i], reversed[j] = path[j], path[i]
+		path[i], path[j] = path[j], path[i]
 	}
 
-	return reversed
+	return path
 }
