@@ -14,6 +14,12 @@ type Claim struct {
 	Territories   []*Territory
 }
 
+func (c *Claim) Tick() {
+	for _, v := range c.Territories {
+		v.Tick()
+	}
+}
+
 func (c *Claim) GetTerritory(name string) *Territory {
 	for _, v := range c.Territories {
 		if strings.EqualFold(v.Name, name) {

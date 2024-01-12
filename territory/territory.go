@@ -75,6 +75,7 @@ func (b *BaseTerritory) CreateTerritoryInstance() *Territory {
 		HQ:                   false,
 		Treasury:             VERY_LOW,
 		RouteStyle:           RouteStyle(OPEN),
+		Claim:                nil,
 		Borders:              CLOSED,
 		TargetTerritory:      "",
 		Connections:          b.Conns,
@@ -222,10 +223,6 @@ func (t *Territory) Tick() {
 		for k, v := range t.Storage {
 			t.Storage[k] = v + int64(t.GetProducedResource())
 		}
-	}
-
-	if currentTimeMillis-t.lastConsumedResource >= 1000 {
-
 	}
 
 	// Consume resources
