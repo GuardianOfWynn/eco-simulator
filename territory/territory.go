@@ -1,11 +1,11 @@
 package territory
 
 import (
+	"math"
 	"strings"
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/victorbetoni/go-streams/streams"
 )
 
 type RouteStyle uint8
@@ -14,6 +14,15 @@ type ResourceType uint8
 type Treasury uint8
 type TransferDirection uint8
 type Storage map[ResourceType]int64
+
+const (
+	BASE_RESOURCE_PRODUCTION  = 1
+	BASE_EMERALD_PRODUCTION   = 2.5
+	BASE_RESOURCE_STORAGE     = 300
+	BASE_EMERALD_STORAGE      = 3000
+	HQ_RESOURCE_STORAGE_BOOST = 1.66666667
+	HQ_EMERALD_STORAGE_BOOST  = 5
+)
 
 const (
 	TERRITORY_TO_HQ TransferDirection = iota
@@ -55,11 +64,11 @@ type ResourceTransference struct {
 
 type BaseTerritory struct {
 	Name              string   `json:"territory"`
-	OreMultiplier     float32  `json:"ore"`
-	CropMultiplier    float32  `json:"crop"`
-	WoodMultiplier    float32  `json:"wood"`
-	FishMultiplier    float32  `json:"fish"`
-	EmeraldMultiplier float32  `json:"emerald"`
+	OreMultiplier     float64  `json:"ore"`
+	CropMultiplier    float64  `json:"crop"`
+	WoodMultiplier    float64  `json:"wood"`
+	FishMultiplier    float64  `json:"fish"`
+	EmeraldMultiplier float64  `json:"emerald"`
 	Conns             []string `json:"conns"`
 }
 
@@ -93,7 +102,7 @@ func (b *BaseTerritory) CreateTerritoryInstance() *Territory {
 			WOOD:    0,
 		},
 		PassingResource: []ResourceTransference{},
-		ProductionMultipliers: map[ResourceType]float32{
+		ProductionMultipliers: map[ResourceType]float64{
 			CROP:    b.CropMultiplier,
 			EMERALD: b.EmeraldMultiplier,
 			FISH:    b.FishMultiplier,
@@ -130,7 +139,7 @@ type Territory struct {
 	RouteStyle            RouteStyle
 	Borders               BorderStyle
 	Storage               Storage
-	ProductionMultipliers map[ResourceType]float32
+	ProductionMultipliers map[ResourceType]float64
 	PassingResource       []ResourceTransference
 	TargetTerritory       string
 	lastResourceProduced  int64
@@ -165,27 +174,37 @@ func (t *Territory) GetTowerHP() int32 {
 }
 
 func (t *Territory) GetResourceRate() int64 {
-	return 0
+	return int64(Bonuses[KEY_BONUS_EMERALD_RATE].Levels[t.Bonuses[KEY_BONUS_RESOURCE_RATE]].Value)
 }
 
 func (t *Territory) GetEmeraldRate() int64 {
-	return 0
+	return int64(Bonuses[KEY_BONUS_EMERALD_RATE].Levels[t.Bonuses[KEY_BONUS_EMERALD_RATE]].Value)
 }
 
-func (t *Territory) GetProducedEmerald() int32 {
-	return 0
+func (t *Territory) GetProducedEmerald() float64 {
+	multiplier := int32(Bonuses[KEY_BONUS_EFFICIENT_EMERALDS].Levels[t.Bonuses[KEY_BONUS_EFFICIENT_EMERALDS]].Value)
+	return (1 + float64(multiplier/100)) * BASE_EMERALD_PRODUCTION
 }
 
-func (t *Territory) GetProducedResource() int32 {
-	return 0
+func (t *Territory) GetProducedResource() float64 {
+	multiplier := int32(Bonuses[KEY_BONUS_EFFICIENT_RESOURCES].Levels[t.Bonuses[KEY_BONUS_EFFICIENT_RESOURCES]].Value) / 100
+	return float64(1+multiplier) * BASE_RESOURCE_PRODUCTION
 }
 
 func (t *Territory) GetEmeraldStorageSize() int32 {
-	return 0
+	multiplier := int32(Bonuses[KEY_BONUS_LARGE_EMERALD_STORAGE].Levels[t.Bonuses[KEY_BONUS_LARGE_EMERALD_STORAGE]].Value) / 100
+	if t.HQ {
+		return (1 + multiplier) * BASE_EMERALD_STORAGE * HQ_EMERALD_STORAGE_BOOST
+	}
+	return (1 + multiplier) * BASE_EMERALD_STORAGE
 }
 
 func (t *Territory) GetResourceStorageSize() int32 {
-	return 0
+	multiplier := int32(Bonuses[KEY_BONUS_LARGE_RESOURCE_STORAGE].Levels[t.Bonuses[KEY_BONUS_LARGE_RESOURCE_STORAGE]].Value) / 100
+	if t.HQ {
+		return int32(math.Ceil(float64((1 + multiplier) * BASE_EMERALD_STORAGE * HQ_EMERALD_STORAGE_BOOST)))
+	}
+	return (1 + multiplier) * BASE_EMERALD_STORAGE
 }
 
 // GetResourceCost: Retrieves the resource costs per second for territory
@@ -199,9 +218,7 @@ func (t *Territory) GetResourceCosts() Storage {
 	}
 	for k, v := range t.Bonuses {
 		bonus := Bonuses[k]
-		level := streams.StreamOf[BonusLevel](bonus.Levels...).Filter(func(e BonusLevel) bool {
-			return e.Level == v
-		}).Current[0]
+		level := bonus.Levels[v]
 		costs[bonus.UsedResorce] = costs[bonus.UsedResorce] + int64(level.Cost)
 	}
 	return costs
@@ -211,17 +228,20 @@ func (t *Territory) Tick() {
 
 	currentTimeMillis := time.Now().UnixMilli()
 
-	// Store emerald
+	// Produce emerald
 	if currentTimeMillis-t.lastEmeraldProduced >= t.GetEmeraldRate()*1000 {
 		t.lastEmeraldProduced = currentTimeMillis
-		t.Storage[EMERALD] = t.Storage[EMERALD] + int64(t.GetProducedEmerald())
+		t.Storage[EMERALD] = t.Storage[EMERALD] + int64(t.GetProducedEmerald()*float64(t.ProductionMultipliers[EMERALD]))
 	}
 
-	// Store resource
+	// Produce resource
 	if currentTimeMillis-t.lastResourceProduced >= t.GetResourceRate()*1000 {
 		t.lastEmeraldProduced = currentTimeMillis
 		for k, v := range t.Storage {
-			t.Storage[k] = v + int64(t.GetProducedResource())
+			if k == EMERALD {
+				continue
+			}
+			t.Storage[k] = v + int64(t.GetProducedResource()*float64(t.ProductionMultipliers[k]))
 		}
 	}
 
@@ -279,6 +299,12 @@ func (t *Territory) ReceiveResource(transference ResourceTransference) {
 		t.StoreResource(transference.Storage)
 	} else {
 		t.PassingResource = append(t.PassingResource, transference)
+	}
+}
+
+func (t *Territory) ProduceResource() {
+	for k, v := range t.ProductionMultipliers {
+		t.Storage[k] = t.Storage[k] + int64(float32(t.GetProducedResource())*v)
 	}
 }
 

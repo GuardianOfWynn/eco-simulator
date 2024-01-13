@@ -7,6 +7,7 @@ import (
 	"path/filepath"
 	"runtime"
 
+	"github.com/GuardianOfWynn/eco-simulator/engine"
 	"github.com/GuardianOfWynn/eco-simulator/territory"
 )
 
@@ -27,38 +28,17 @@ func main() {
 	_ = json.Unmarshal([]byte(str), &terrs)
 
 	territories := []*territory.Territory{}
-	claim := territory.Claim{
-		GlobalTax:     0,
-		AllyTax:       0,
-		GlobalStyle:   territory.CHEAPEST,
-		GlobalBorders: territory.OPEN,
-	}
-
 	for _, a := range terrs {
 		territories = append(territories, a.CreateTerritoryInstance())
 	}
-	claim.Territories = territories
-	index := 0
-	for i, v := range claim.Territories {
-		if v.Name == "Thanos Exit Upper" {
-			index = i
-		}
+
+	guildMap := &territory.GuildMap{
+		Territories: territories,
+		Claims:      []*territory.Claim{},
 	}
 
-	finder := territory.Pathfinder{
-		From:       claim.Territories[0],
-		Target:     claim.Territories[index],
-		Claim:      claim,
-		RouteStyle: territory.CHEAPEST,
+	engine := engine.Engine{
+		Map: guildMap,
 	}
-
-	fmt.Println("From: ", finder.From.Name)
-	fmt.Println("Target: ", finder.Target.Name)
-	fmt.Println("")
-	route := finder.Route()
-	fmt.Println(len(route))
-	for _, v := range route {
-		fmt.Println(v.Name)
-	}
-
+	engine.Start()
 }

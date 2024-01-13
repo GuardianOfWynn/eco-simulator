@@ -13,7 +13,7 @@ type TerritoryBonus struct {
 	Format         string
 	Sprite         string
 	UsedResorce    ResourceType
-	Levels         []BonusLevel
+	Levels         map[uint8]BonusLevel
 	MaxTerritories uint8
 }
 
@@ -24,12 +24,12 @@ var (
 		Format:      "%",
 		Sprite:      "",
 		UsedResorce: WOOD,
-		Levels: []BonusLevel{
-			{Level: 0, Cost: 0, Value: 0},
-			{Level: 1, Cost: 200, Value: 150},
-			{Level: 2, Cost: 400, Value: 200},
-			{Level: 3, Cost: 800, Value: 250},
-			{Level: 4, Cost: 1600, Value: 300},
+		Levels: map[uint8]BonusLevel{
+			0: {Level: 0, Cost: 0, Value: 0},
+			1: {Level: 1, Cost: 200, Value: 150},
+			2: {Level: 2, Cost: 400, Value: 200},
+			3: {Level: 3, Cost: 800, Value: 250},
+			4: {Level: 4, Cost: 1600, Value: 300},
 		},
 	}
 
@@ -40,9 +40,9 @@ var (
 		Sprite:         "",
 		MaxTerritories: 5,
 		UsedResorce:    FISH,
-		Levels: []BonusLevel{
-			{Level: 0, Cost: 0, Value: 1},
-			{Level: 1, Cost: 4800, Value: 2},
+		Levels: map[uint8]BonusLevel{
+			0: {Level: 0, Cost: 0, Value: 1},
+			1: {Level: 1, Cost: 4800, Value: 2},
 		},
 	}
 
@@ -52,11 +52,11 @@ var (
 		Format:      "s",
 		Sprite:      "",
 		UsedResorce: CROP,
-		Levels: []BonusLevel{
-			{Level: 0, Cost: 0, Value: 0},
-			{Level: 1, Cost: 800, Value: 24},
-			{Level: 2, Cost: 1600, Value: 18},
-			{Level: 3, Cost: 3200, Value: 12},
+		Levels: map[uint8]BonusLevel{
+			0: {Level: 0, Cost: 0, Value: 0},
+			1: {Level: 1, Cost: 800, Value: 24},
+			2: {Level: 2, Cost: 1600, Value: 18},
+			3: {Level: 3, Cost: 3200, Value: 12},
 		},
 	}
 
@@ -66,11 +66,11 @@ var (
 		Format:      "s",
 		Sprite:      "",
 		UsedResorce: ORE,
-		Levels: []BonusLevel{
-			{Level: 0, Cost: 0, Value: 0},
-			{Level: 1, Cost: 200, Value: 20},
-			{Level: 2, Cost: 400, Value: 15},
-			{Level: 3, Cost: 800, Value: 10},
+		Levels: map[uint8]BonusLevel{
+			0: {Level: 0, Cost: 0, Value: 0},
+			1: {Level: 1, Cost: 200, Value: 20},
+			2: {Level: 2, Cost: 400, Value: 15},
+			3: {Level: 3, Cost: 800, Value: 10},
 		},
 	}
 
@@ -80,16 +80,16 @@ var (
 		Format:      "%",
 		Sprite:      "",
 		UsedResorce: WOOD,
-		Levels: []BonusLevel{
-			{Level: 0, Cost: 0, Value: 0},
-			{Level: 1, Cost: 600, Value: 10},
-			{Level: 2, Cost: 1300, Value: 20},
-			{Level: 3, Cost: 2000, Value: 30},
-			{Level: 4, Cost: 2700, Value: 40},
-			{Level: 5, Cost: 3400, Value: 50},
-			{Level: 6, Cost: 5500, Value: 60},
-			{Level: 7, Cost: 10000, Value: 80},
-			{Level: 8, Cost: 20000, Value: 100},
+		Levels: map[uint8]BonusLevel{
+			0: {Level: 0, Cost: 0, Value: 0},
+			1: {Level: 1, Cost: 600, Value: 10},
+			2: {Level: 2, Cost: 1300, Value: 20},
+			3: {Level: 3, Cost: 2000, Value: 30},
+			4: {Level: 4, Cost: 2700, Value: 40},
+			5: {Level: 5, Cost: 3400, Value: 50},
+			6: {Level: 6, Cost: 5500, Value: 60},
+			7: {Level: 7, Cost: 10000, Value: 80},
+			8: {Level: 8, Cost: 20000, Value: 100},
 		},
 	}
 
@@ -100,16 +100,16 @@ var (
 		Sprite:         "",
 		MaxTerritories: 5,
 		UsedResorce:    FISH,
-		Levels: []BonusLevel{
-			{Level: 0, Cost: 0, Value: 0},
-			{Level: 1, Cost: 600, Value: 10},
-			{Level: 2, Cost: 1200, Value: 20},
-			{Level: 3, Cost: 1800, Value: 30},
-			{Level: 4, Cost: 2400, Value: 40},
-			{Level: 5, Cost: 3000, Value: 50},
-			{Level: 6, Cost: 5000, Value: 60},
-			{Level: 7, Cost: 10000, Value: 80},
-			{Level: 8, Cost: 20000, Value: 100},
+		Levels: map[uint8]BonusLevel{
+			0: {Level: 0, Cost: 0, Value: 0},
+			1: {Level: 1, Cost: 600, Value: 10},
+			2: {Level: 2, Cost: 1200, Value: 20},
+			3: {Level: 3, Cost: 1800, Value: 30},
+			4: {Level: 4, Cost: 2400, Value: 40},
+			5: {Level: 5, Cost: 3000, Value: 50},
+			6: {Level: 6, Cost: 5000, Value: 60},
+			7: {Level: 7, Cost: 10000, Value: 80},
+			8: {Level: 8, Cost: 20000, Value: 100},
 		},
 	}
 
@@ -119,16 +119,16 @@ var (
 		Format:      "%",
 		Sprite:      "",
 		UsedResorce: CROP,
-		Levels: []BonusLevel{
-			{Level: 0, Cost: 0, Value: 0},
-			{Level: 1, Cost: 600, Value: 10},
-			{Level: 2, Cost: 1200, Value: 20},
-			{Level: 3, Cost: 1800, Value: 40},
-			{Level: 4, Cost: 2400, Value: 60},
-			{Level: 5, Cost: 3000, Value: 80},
-			{Level: 6, Cost: 5000, Value: 120},
-			{Level: 7, Cost: 10000, Value: 160},
-			{Level: 8, Cost: 20000, Value: 200},
+		Levels: map[uint8]BonusLevel{
+			0: {Level: 0, Cost: 0, Value: 0},
+			1: {Level: 1, Cost: 600, Value: 10},
+			2: {Level: 2, Cost: 1200, Value: 20},
+			3: {Level: 3, Cost: 1800, Value: 40},
+			4: {Level: 4, Cost: 2400, Value: 60},
+			5: {Level: 5, Cost: 3000, Value: 80},
+			6: {Level: 6, Cost: 5000, Value: 120},
+			7: {Level: 7, Cost: 10000, Value: 160},
+			8: {Level: 8, Cost: 20000, Value: 200},
 		},
 	}
 
@@ -138,16 +138,16 @@ var (
 		Format:      "%",
 		Sprite:      "",
 		UsedResorce: ORE,
-		Levels: []BonusLevel{
-			{Level: 0, Cost: 0, Value: 0},
-			{Level: 1, Cost: 600, Value: 5},
-			{Level: 2, Cost: 1200, Value: 10},
-			{Level: 3, Cost: 1800, Value: 15},
-			{Level: 4, Cost: 2400, Value: 20},
-			{Level: 5, Cost: 3000, Value: 25},
-			{Level: 6, Cost: 5000, Value: 40},
-			{Level: 7, Cost: 10000, Value: 60},
-			{Level: 8, Cost: 20000, Value: 80},
+		Levels: map[uint8]BonusLevel{
+			0: {Level: 0, Cost: 0, Value: 0},
+			1: {Level: 1, Cost: 600, Value: 5},
+			2: {Level: 2, Cost: 1200, Value: 10},
+			3: {Level: 3, Cost: 1800, Value: 15},
+			4: {Level: 4, Cost: 2400, Value: 20},
+			5: {Level: 5, Cost: 3000, Value: 25},
+			6: {Level: 6, Cost: 5000, Value: 40},
+			7: {Level: 7, Cost: 10000, Value: 60},
+			8: {Level: 8, Cost: 20000, Value: 80},
 		},
 	}
 
@@ -157,17 +157,17 @@ var (
 		Format:      "/h",
 		Sprite:      "",
 		UsedResorce: EMERALD,
-		Levels: []BonusLevel{
-			{Level: 0, Cost: 0, Value: 0},
-			{Level: 1, Cost: 100, Value: 36000},
-			{Level: 2, Cost: 200, Value: 66000},
-			{Level: 3, Cost: 400, Value: 120000},
-			{Level: 4, Cost: 800, Value: 228000},
-			{Level: 5, Cost: 1600, Value: 456000},
-			{Level: 6, Cost: 3200, Value: 900000},
-			{Level: 7, Cost: 6400, Value: 1740000},
-			{Level: 8, Cost: 9600, Value: 2580000},
-			{Level: 9, Cost: 12800, Value: 3360000},
+		Levels: map[uint8]BonusLevel{
+			0: {Level: 0, Cost: 0, Value: 0},
+			1: {Level: 1, Cost: 100, Value: 36000},
+			2: {Level: 2, Cost: 200, Value: 66000},
+			3: {Level: 3, Cost: 400, Value: 120000},
+			4: {Level: 4, Cost: 800, Value: 228000},
+			5: {Level: 5, Cost: 1600, Value: 456000},
+			6: {Level: 6, Cost: 3200, Value: 900000},
+			7: {Level: 7, Cost: 6400, Value: 1740000},
+			8: {Level: 8, Cost: 9600, Value: 2580000},
+			9: {Level: 9, Cost: 12800, Value: 3360000},
 		},
 	}
 
@@ -177,11 +177,11 @@ var (
 		Format:      "%/h",
 		Sprite:      "",
 		UsedResorce: FISH,
-		Levels: []BonusLevel{
-			{Level: 0, Cost: 0, Value: 0},
-			{Level: 1, Cost: 800, Value: 0.15},
-			{Level: 2, Cost: 4800, Value: 1.2},
-			{Level: 3, Cost: 12800, Value: 2.4},
+		Levels: map[uint8]BonusLevel{
+			0: {Level: 0, Cost: 0, Value: 0},
+			1: {Level: 1, Cost: 800, Value: 0.15},
+			2: {Level: 2, Cost: 4800, Value: 1.2},
+			3: {Level: 3, Cost: 12800, Value: 2.4},
 		},
 	}
 
@@ -191,13 +191,13 @@ var (
 		Format:      "%/h",
 		Sprite:      "",
 		UsedResorce: WOOD,
-		Levels: []BonusLevel{
-			{Level: 0, Cost: 0, Value: 0},
-			{Level: 1, Cost: 200, Value: 0.3},
-			{Level: 2, Cost: 800, Value: 3},
-			{Level: 3, Cost: 1600, Value: 6},
-			{Level: 4, Cost: 3200, Value: 12},
-			{Level: 5, Cost: 6400, Value: 24},
+		Levels: map[uint8]BonusLevel{
+			0: {Level: 0, Cost: 0, Value: 0},
+			1: {Level: 1, Cost: 200, Value: 0.3},
+			2: {Level: 2, Cost: 800, Value: 3},
+			3: {Level: 3, Cost: 1600, Value: 6},
+			4: {Level: 4, Cost: 3200, Value: 12},
+			5: {Level: 5, Cost: 6400, Value: 24},
 		},
 	}
 
@@ -207,14 +207,14 @@ var (
 		Format:      "%",
 		Sprite:      "",
 		UsedResorce: EMERALD,
-		Levels: []BonusLevel{
-			{Level: 0, Cost: 0, Value: 0},
-			{Level: 1, Cost: 400, Value: 100},
-			{Level: 2, Cost: 800, Value: 300},
-			{Level: 3, Cost: 2000, Value: 700},
-			{Level: 4, Cost: 5000, Value: 1400},
-			{Level: 5, Cost: 16000, Value: 3300},
-			{Level: 6, Cost: 48000, Value: 7900},
+		Levels: map[uint8]BonusLevel{
+			0: {Level: 0, Cost: 0, Value: 0},
+			1: {Level: 1, Cost: 400, Value: 100},
+			2: {Level: 2, Cost: 800, Value: 300},
+			3: {Level: 3, Cost: 2000, Value: 700},
+			4: {Level: 4, Cost: 5000, Value: 1400},
+			5: {Level: 5, Cost: 16000, Value: 3300},
+			6: {Level: 6, Cost: 48000, Value: 7900},
 		},
 	}
 
@@ -224,14 +224,14 @@ var (
 		Format:      "%",
 		Sprite:      "",
 		UsedResorce: WOOD,
-		Levels: []BonusLevel{
-			{Level: 0, Cost: 0, Value: 0},
-			{Level: 1, Cost: 200, Value: 100},
-			{Level: 2, Cost: 400, Value: 300},
-			{Level: 3, Cost: 1000, Value: 700},
-			{Level: 4, Cost: 2500, Value: 1400},
-			{Level: 5, Cost: 8000, Value: 3300},
-			{Level: 6, Cost: 24000, Value: 7900},
+		Levels: map[uint8]BonusLevel{
+			0: {Level: 0, Cost: 0, Value: 0},
+			1: {Level: 1, Cost: 200, Value: 100},
+			2: {Level: 2, Cost: 400, Value: 300},
+			3: {Level: 3, Cost: 1000, Value: 700},
+			4: {Level: 4, Cost: 2500, Value: 1400},
+			5: {Level: 5, Cost: 8000, Value: 3300},
+			6: {Level: 6, Cost: 24000, Value: 7900},
 		},
 	}
 
@@ -241,14 +241,14 @@ var (
 		Format:      "%",
 		Sprite:      "",
 		UsedResorce: EMERALD,
-		Levels: []BonusLevel{
-			{Level: 0, Cost: 0, Value: 0},
-			{Level: 1, Cost: 6000, Value: 50},
-			{Level: 2, Cost: 12000, Value: 100},
-			{Level: 3, Cost: 24000, Value: 150},
-			{Level: 4, Cost: 48000, Value: 200},
-			{Level: 5, Cost: 96000, Value: 250},
-			{Level: 6, Cost: 192000, Value: 300},
+		Levels: map[uint8]BonusLevel{
+			0: {Level: 0, Cost: 0, Value: 0},
+			1: {Level: 1, Cost: 6000, Value: 50},
+			2: {Level: 2, Cost: 12000, Value: 100},
+			3: {Level: 3, Cost: 24000, Value: 150},
+			4: {Level: 4, Cost: 48000, Value: 200},
+			5: {Level: 5, Cost: 96000, Value: 250},
+			6: {Level: 6, Cost: 192000, Value: 300},
 		},
 	}
 
@@ -258,11 +258,11 @@ var (
 		Format:      "%",
 		Sprite:      "",
 		UsedResorce: ORE,
-		Levels: []BonusLevel{
-			{Level: 0, Cost: 0, Value: 0},
-			{Level: 1, Cost: 2000, Value: 35},
-			{Level: 2, Cost: 8000, Value: 100},
-			{Level: 3, Cost: 32000, Value: 300},
+		Levels: map[uint8]BonusLevel{
+			0: {Level: 0, Cost: 0, Value: 0},
+			1: {Level: 1, Cost: 2000, Value: 35},
+			2: {Level: 2, Cost: 8000, Value: 100},
+			3: {Level: 3, Cost: 32000, Value: 300},
 		},
 	}
 
@@ -272,11 +272,11 @@ var (
 		Format:      "s",
 		Sprite:      "",
 		UsedResorce: EMERALD,
-		Levels: []BonusLevel{
-			{Level: 0, Cost: 0, Value: 4},
-			{Level: 1, Cost: 6000, Value: 3},
-			{Level: 2, Cost: 18000, Value: 2},
-			{Level: 3, Cost: 32000, Value: 1},
+		Levels: map[uint8]BonusLevel{
+			0: {Level: 0, Cost: 0, Value: 4},
+			1: {Level: 1, Cost: 6000, Value: 3},
+			2: {Level: 2, Cost: 18000, Value: 2},
+			3: {Level: 3, Cost: 32000, Value: 1},
 		},
 	}
 
@@ -286,13 +286,33 @@ var (
 		Format:      "s",
 		Sprite:      "",
 		UsedResorce: CROP,
-		Levels: []BonusLevel{
-			{Level: 0, Cost: 0, Value: 4},
-			{Level: 1, Cost: 2000, Value: 3},
-			{Level: 2, Cost: 8000, Value: 2},
-			{Level: 3, Cost: 32000, Value: 1},
+		Levels: map[uint8]BonusLevel{
+			0: {Level: 0, Cost: 0, Value: 4},
+			1: {Level: 1, Cost: 2000, Value: 3},
+			2: {Level: 2, Cost: 8000, Value: 2},
+			3: {Level: 3, Cost: 32000, Value: 1},
 		},
 	}
+)
+
+const (
+	KEY_BONUS_STRONGER_MINIONS       = "stronger_minions"
+	KEY_BONUS_MULTIHIT               = "multihit"
+	KEY_BONUS_TOWER_AURA             = "tower_aura"
+	KEY_BONUS_TOWER_VOLLEY           = "tower_volley"
+	KEY_BONUS_GATHER_XP              = "gather_xp"
+	KEY_BONUS_MOB_XP                 = "mob_xp"
+	KEY_BONUS_MOB_DAMAGE             = "mob_damage"
+	KEY_BONUS_PVP_DAMAGE             = "pvp_damage"
+	KEY_BONUS_XP_SEEKING             = "xp_seeking"
+	KEY_BONUS_TOME_SEEKING           = "tome_seeking"
+	KEY_BONUS_EMERALD_SEEKING        = "emerald_seeking"
+	KEY_BONUS_LARGE_RESOURCE_STORAGE = "large_resource_storage"
+	KEY_BONUS_LARGE_EMERALD_STORAGE  = "larger_emerald_storage"
+	KEY_BONUS_EFFICIENT_RESOURCES    = "efficient_resource"
+	KEY_BONUS_EFFICIENT_EMERALDS     = "efficient_emerald"
+	KEY_BONUS_RESOURCE_RATE          = "resource_rate"
+	KEY_BONUS_EMERALD_RATE           = "emerald_rate"
 )
 
 var Bonuses = map[string]TerritoryBonus{
