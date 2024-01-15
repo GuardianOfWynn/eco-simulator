@@ -23,3 +23,12 @@ func (g *GuildMap) TransferTerritory(territory *Territory, claim *Claim) {
 	}
 	claim.Territories = append(claim.Territories, territory)
 }
+
+func (g *GuildMap) GetTerritory(name string) *Territory {
+	for _, terr := range g.Territories {
+		if strings.EqualFold(terr.Name, name) {
+			return terr
+		}
+	}
+	return nil
+}

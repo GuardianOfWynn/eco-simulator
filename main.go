@@ -7,8 +7,7 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/GuardianOfWynn/eco-simulator/engine"
-	"github.com/GuardianOfWynn/eco-simulator/territory"
+	territory "github.com/GuardianOfWynn/eco-simulator/map"
 )
 
 var (
@@ -26,6 +25,21 @@ func main() {
 
 	var terrs []territory.BaseTerritory
 	_ = json.Unmarshal([]byte(str), &terrs)
+	for _, v := range terrs {
+		territory.BaseTerritoriesMap[v.Name] = v
+	}
+
+	presetJson, err := ioutil.ReadFile(basepath + "\\presets\\sky.json")
+	if err != nil {
+		fmt.Print(err)
+	}
+	presetStr := string(presetJson)
+
+	var preset territory.ClaimPreset
+	err = json.Unmarshal([]byte(presetStr), &preset)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
 
 	territories := []*territory.Territory{}
 	for _, a := range terrs {
@@ -36,9 +50,9 @@ func main() {
 		Territories: territories,
 		Claims:      []*territory.Claim{},
 	}
-
-	engine := engine.Engine{
+	preset.Parse(guildMap)
+	territory.EngineInstance = &territory.Engine{
 		Map: guildMap,
 	}
-	engine.Start()
+	territory.EngineInstance.Start()
 }

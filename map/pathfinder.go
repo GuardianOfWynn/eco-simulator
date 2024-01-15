@@ -9,10 +9,8 @@ import (
 )
 
 type Pathfinder struct {
-	From       *Territory
-	Target     *Territory
-	Claim      Claim
-	RouteStyle RouteStyle
+	Root     *Territory
+	GuildMap *GuildMap
 }
 
 type Node struct {
@@ -30,18 +28,16 @@ func (n *Node) Key() float64 {
 	return n.Distance
 }
 
-func (p *Pathfinder) Route() []*Territory {
-
-	//implement djikstra algorithm
+func (p *Pathfinder) djikstra(target *Territory, style RouteStyle) (map[string]int, map[string]string, map[string]*Territory) {
 
 	visited := map[string]bool{}
 	nodes := map[string]*Territory{}
 	distances := make(map[string]int)
 	previous := make(map[string]string)
-	root := p.From.Name
+	root := p.Root.Name
 	nodesMap := map[string]*Node{}
 
-	streams.StreamOf[*Territory](p.Claim.Territories...).ForEach(func(e *Territory) {
+	streams.StreamOf[*Territory](p.GuildMap.Territories...).ForEach(func(e *Territory) {
 		nodesMap[e.Name] = &Node{
 			Territory: e,
 			Distance:  math.Inf(1),
@@ -53,8 +49,8 @@ func (p *Pathfinder) Route() []*Territory {
 	})
 
 	nodesMap[root] = &Node{
-		Territory: p.From,
-		Conns:     p.From.Connections,
+		Territory: p.Root,
+		Conns:     p.Root.Connections,
 		Distance:  0,
 		Parent:    nil,
 	}
@@ -89,10 +85,19 @@ func (p *Pathfinder) Route() []*Territory {
 
 	}
 
-	path := []*Territory{}
-	currentNode := previous[p.Target.Name]
+	return distances, previous, nodes
+}
 
-	for currentNode != p.From.Name {
+func (p *Pathfinder) Route(target *Territory, style RouteStyle) []*Territory {
+
+	//djikstra algorithm
+
+	_, previous, nodes := p.djikstra(target, style)
+
+	path := []*Territory{}
+	currentNode := previous[target.Name]
+
+	for currentNode != p.Root.Name {
 		path = append(path, nodes[currentNode])
 		currentNode = previous[currentNode]
 	}
@@ -102,4 +107,9 @@ func (p *Pathfinder) Route() []*Territory {
 	}
 
 	return path
+}
+
+func (p *Pathfinder) GetDistance(target *Territory) int64 {
+	distance, _, _ := p.djikstra(target, FASTEST)
+	return int64(distance[target.Name])
 }

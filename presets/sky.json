@@ -1,0 +1,137 @@
+
+    {
+        "name": "Sky Claim",
+        "hq": "Central Islands",
+        "global_style": 0,
+        "global_borders": 0,
+        "global_tax": 0.6,
+        "ally_tax": 0.05,
+        "territories": [
+            {
+                "territory": "Molten Reach",
+                "boosts": {
+                    "bonuses": {},
+                    "upgrades": {}
+                },
+                "style": 0,
+                "borders": 0,
+                "treasury": 0,
+                "tax": 0.6,
+                "ally_tax": 0.05
+            },
+            {
+                "territory": "Angel Refuge",
+                "boosts": {
+                    "bonuses": {},
+                    "upgrades": {}
+                },
+                "style": 0,
+                "borders": 0,
+                "treasury": 0,
+                "tax": 0.6,
+                "ally_tax": 0.05
+            },
+            {
+                "territory": "Frozen Fort",
+                "boosts": {
+                    "bonuses": {},
+                    "upgrades": {}
+                },
+                "style": 0,
+                "borders": 0,
+                "treasury": 0,
+                "tax": 0.6,
+                "ally_tax": 0.05
+            },
+            {
+                "territory": "Sky Falls",
+                "boosts": {
+                    "bonuses": {},
+                    "upgrades": {}
+                },
+                "style": 0,
+                "borders": 0,
+                "treasury": 0,
+                "tax": 0.6,
+                "ally_tax": 0.05
+            },{
+                "territory": "Raider's Base Upper",
+                "boosts": {
+                    "bonuses": {},
+                    "upgrades": {}
+                },
+                "style": 0,
+                "borders": 0,
+                "treasury": 0,
+                "tax": 0.6,
+                "ally_tax": 0.05
+            },{
+                "territory": "Raider's Base Lower",
+                "boosts": {
+                    "bonuses": {},
+                    "upgrades": {}
+                },
+                "style": 0,
+                "borders": 0,
+                "treasury": 0,
+                "tax": 0.6,
+                "ally_tax": 0.05
+            },{
+                "territory": "Ahmsord Outskirts",
+                "boosts": {
+                    "bonuses": {},
+                    "upgrades": {}
+                },
+                "style": 0,
+                "borders": 0,
+                "treasury": 0,
+                "tax": 0.6,
+                "ally_tax": 0.05
+            },{
+                "territory": "Wybel Island",
+                "boosts": {
+                    "bonuses": {},
+                    "upgrades": {}
+                },
+                "style": 0,
+                "borders": 0,
+                "treasury": 0,
+                "tax": 0.6,
+                "ally_tax": 0.05
+            },{
+                "territory": "Sky Island Ascent",
+                "boosts": {
+                    "bonuses": {},
+                    "upgrades": {}
+                },
+                "style": 0,
+                "borders": 0,
+                "treasury": 0,
+                "tax": 0.6,
+                "ally_tax": 0.05
+            },{
+                "territory": "Astraulus' Tower",
+                "boosts": {
+                    "bonuses": {},
+                    "upgrades": {}
+                },
+                "style": 0,
+                "borders": 0,
+                "treasury": 0,
+                "tax": 0.6,
+                "ally_tax": 0.05
+            },{
+                "territory": "Central Islands",
+                "boosts": {
+                    "bonuses": {
+                    },
+                    "upgrades": {}
+                },
+                "style": 0,
+                "borders": 0,
+                "treasury": 0,
+                "tax": 0.6,
+                "ally_tax": 0.05
+            }
+        ]
+    }
