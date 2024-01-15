@@ -9,6 +9,7 @@ require (
 )
 
 require (
+	github.com/norunners/vert v0.0.0-20221203075838-106a353d42dd // indirect
 	github.com/onsi/ginkgo v1.16.5 // indirect
 	github.com/onsi/gomega v1.30.0 // indirect
 )

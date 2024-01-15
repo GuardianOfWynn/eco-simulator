@@ -1,6 +1,7 @@
 package territory
 
 import (
+	"fmt"
 	"math"
 	"strings"
 	"time"
@@ -300,7 +301,7 @@ func (t *Territory) FindExternal() []*Territory {
 	}
 	externals := []*Territory{}
 	for _, v := range EngineInstance.Map.Territories {
-		if pf.GetDistance(v, FASTEST) <= 3 {
+		if pf.GetDistance(v) <= 3 {
 			externals = append(externals, v)
 		}
 	}
@@ -374,6 +375,9 @@ func (t *Territory) Tick() {
 			t.TransferResource(r)
 		}
 		t.PassingResource = []ResourceTransference{}
+		if t.HQ {
+			fmt.Println("HQ Storage: ", t.Storage)
+		}
 	}
 }
 
