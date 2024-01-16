@@ -1,13 +1,12 @@
 package main
 
 import (
+	"fmt"
 	"path/filepath"
 	"runtime"
 	"syscall/js"
 
-	territory "github.com/GuardianOfWynn/eco-simulator/map"
 	"github.com/GuardianOfWynn/eco-simulator/wasm"
-	"github.com/norunners/vert"
 )
 
 var (
@@ -16,8 +15,9 @@ var (
 )
 
 func main() {
+	fmt.Println("hello")
+	ch := make(chan byte, 1)
 	js.Global().Set("startEngine", js.FuncOf(wasm.StartEngine))
-	js.Global().Set("engineInstance", vert.ValueOf(territory.EngineInstance))
-	ch := make(chan struct{}, 0)
+
 	<-ch
 }

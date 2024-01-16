@@ -39,10 +39,14 @@ func CreateEngine(territoriesJson []byte, presetJson []byte) {
 
 func (e *Engine) Start() {
 
-	for range time.Tick(time.Second * 1) {
-		for _, terr := range e.Map.Territories {
-			terr.Tick()
+	ch := make(chan byte, 1)
+	go func() {
+		for range time.Tick(time.Second * 1) {
+			for _, terr := range e.Map.Territories {
+				terr.Tick()
+			}
 		}
-	}
+	}()
+	<-ch
 
 }
