@@ -44,7 +44,7 @@ func (p *Pathfinder) djikstra(target *Territory, style RouteStyle) (map[string]i
 			Conns:     e.Connections,
 			Parent:    nil,
 		}
-		distances[e.Name] = math.MaxInt64
+		distances[e.Name] = math.MaxInt32
 		nodes[e.Name] = e
 	})
 

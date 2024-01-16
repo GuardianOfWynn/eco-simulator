@@ -2,14 +2,14 @@ package territory
 
 import (
 	"encoding/json"
+	"log"
 	"time"
 )
 
 var EngineInstance *Engine = nil
 
 type Engine struct {
-	Map    *GuildMap
-	ticker *time.Ticker
+	Map *GuildMap
 }
 
 func CreateEngine(territoriesJson []byte, presetJson []byte) {
@@ -38,8 +38,8 @@ func CreateEngine(territoriesJson []byte, presetJson []byte) {
 }
 
 func (e *Engine) Start() {
-
-	ch := make(chan byte, 1)
+	log.Default().Println("Starting EcoEngine...")
+	//ch := make(chan byte, 1)
 	go func() {
 		for range time.Tick(time.Second * 1) {
 			for _, terr := range e.Map.Territories {
@@ -47,6 +47,5 @@ func (e *Engine) Start() {
 			}
 		}
 	}()
-	<-ch
 
 }

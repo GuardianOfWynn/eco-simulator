@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"path/filepath"
 	"runtime"
 	"syscall/js"
@@ -15,9 +16,11 @@ var (
 )
 
 func main() {
-	fmt.Println("hello")
+	fmt.Println("Started")
+	log.Default().Println("Booting WASM EcoEngine application...")
 	ch := make(chan byte, 1)
 	js.Global().Set("startEngine", js.FuncOf(wasm.StartEngine))
+	js.Global().Set("getEngineInstance", js.FuncOf(wasm.GetEngine))
 
 	<-ch
 }

@@ -4,6 +4,7 @@ import (
 	"syscall/js"
 
 	territory "github.com/GuardianOfWynn/eco-simulator/map"
+	"github.com/norunners/vert"
 )
 
 func StartEngine(val js.Value, inputs []js.Value) interface{} {
@@ -13,4 +14,8 @@ func StartEngine(val js.Value, inputs []js.Value) interface{} {
 	territory.CreateEngine([]byte(territories), []byte(preset))
 	territory.EngineInstance.Start()
 	return nil
+}
+
+func GetEngine(val js.Value, inputs []js.Value) interface{} {
+	return vert.ValueOf(*territory.EngineInstance)
 }
