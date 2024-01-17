@@ -5,9 +5,8 @@ import (
 	"log"
 	"path/filepath"
 	"runtime"
-	"syscall/js"
 
-	"github.com/GuardianOfWynn/eco-simulator/wasm"
+	territory "github.com/GuardianOfWynn/eco-simulator/map"
 )
 
 var (
@@ -15,12 +14,13 @@ var (
 	basepath   = filepath.Dir(b)
 )
 
+//export startEngineTinyGo
+func StartEngine(territories, preset string) {
+	territory.CreateEngine([]byte(territories), []byte(preset))
+	territory.EngineInstance.Start()
+}
+
 func main() {
 	fmt.Println("Started")
 	log.Default().Println("Booting WASM EcoEngine application...")
-	ch := make(chan byte, 1)
-	js.Global().Set("startEngine", js.FuncOf(wasm.StartEngine))
-	js.Global().Set("getEngineInstance", js.FuncOf(wasm.GetEngine))
-
-	<-ch
 }
